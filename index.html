@@ -3,286 +3,70 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Weinrich Objektservice | PV-Asset-Management, EEG-Beratung, Photovoltaik-Reinigung & Objektservice</title>
+<title>Weinrich Objektservice</title>
+
 <style>
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#eef5fb;color:#0f172a;line-height:1.6}
+body{margin:0;font-family:Arial;background:#eef5fb;color:#0f172a}
 .container{max-width:1100px;margin:auto;padding:24px}
-.nav{position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border-bottom:1px solid #dbe5ef}
-.nav .container{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 24px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#0f172a;font-weight:700}
-.brand img{height:46px}
-.brand small{display:block;color:#475569;font-weight:600}
-.nav-links a{text-decoration:none;color:#475569;margin-left:10px;padding:8px 14px;border-radius:999px}
-.nav-links a:hover{background:#eef5ff;color:#1d4ed8}
-.nav-cta{border:2px solid #1d4ed8;color:#1d4ed8 !important;background:#fff}
-.hero{background:linear-gradient(120deg,rgba(11,18,32,.86),rgba(29,78,216,.58)),url('Reinigung_PV-Anlage.jpg') center/cover;color:#fff;padding:90px 0}
-.hero-grid,.grid,.split,.trust-grid,.stats{display:grid;gap:22px}
-.hero-grid{grid-template-columns:1.2fr .8fr;align-items:center}
-.eyebrow{display:inline-block;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.14);font-size:13px;margin-bottom:16px}
-h1{font-size:clamp(34px,5vw,58px);line-height:1.05;margin:0 0 16px}
-.hero p{font-size:18px;color:#dbeafe}
-.hero-card,.card,.stat,.trust-item{background:#fff;border-radius:24px;padding:24px;box-shadow:0 20px 60px rgba(15,23,42,.10)}
-.hero-card{background:rgba(255,255,255,.10);color:#fff;border:1px solid rgba(255,255,255,.14)}
-.hero-card ul{margin:0;padding-left:18px}
-.section{padding:72px 0}
-.section-alt{background:rgba(255,255,255,.72)}
-.headline{max-width:760px;margin-bottom:24px}
-.headline h2{font-size:clamp(28px,4vw,42px);line-height:1.1;margin:0 0 12px}
-.headline p{color:#475569;margin:0;font-size:18px}
-.stats{grid-template-columns:repeat(3,1fr)}
-.stat strong{display:block;font-size:28px;margin-bottom:6px}
-.grid{grid-template-columns:repeat(3,1fr)}
-.card h3,.trust-item h3{margin-top:0;font-size:24px}
-.card p{color:#475569}
-.card ul{padding-left:18px}
-.service-image{width:100%;height:220px;object-fit:cover;border-radius:18px;margin-bottom:16px;border:1px solid rgba(15,23,42,.08)}
-.split{grid-template-columns:1fr 1fr;align-items:start}
-.contact-box{background:linear-gradient(135deg,#0b1220,#1e3a8a);color:#fff;border-radius:28px;padding:34px;box-shadow:0 20px 60px rgba(15,23,42,.10)}
-.contact-box p{color:#dbeafe}
-.profile-image{width:140px;height:140px;object-fit:cover;border-radius:16px;border:3px solid rgba(255,255,255,.25)}
-.trust-grid{grid-template-columns:repeat(3,1fr)}
-footer{padding:28px 0 42px;text-align:center;color:#475569}
-.footer-links a{text-decoration:none;color:#1d4ed8;margin:0 10px}
-.request-float,.whatsapp-float{position:fixed;bottom:18px;text-decoration:none;z-index:999}
-.request-float{left:18px;background:#1d4ed8;color:#fff;padding:14px 18px;border-radius:999px;font-weight:700}
-.whatsapp-float{right:18px;background:#25D366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px}
-@media (max-width:900px){.hero-grid,.grid,.split,.trust-grid,.stats{grid-template-columns:1fr}}
+.nav{background:white;padding:15px;display:flex;justify-content:space-between;align-items:center}
+.hero{background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.5)),url('Reinigung_PV-Anlage.jpg');background-size:cover;color:white;padding:100px 20px;text-align:center}
+.btn{background:#16a34a;color:white;padding:12px 20px;border-radius:10px;text-decoration:none;font-weight:bold}
+.card{background:white;padding:20px;border-radius:15px;margin:20px 0}
+img{width:100%;border-radius:10px;margin-bottom:10px}
 </style>
 </head>
+
 <body>
-<nav class="nav">
-  <div class="container">
-    <a href="#hero" class="brand">
-      <img src="Weinrich Objektservice.png" alt="Weinrich Objektservice Logo">
-      <span>Weinrich Objektservice<small>PV-Asset-Management & Reinigung</small></span>
-    </a>
-    <div class="nav-links">
-      <a href="#leistungen">Leistungen</a>
-      <a href="#pv">PV-Service</a>
-      <a href="#eeg">EEG-Beratung</a>
-      <a href="#kontakt" class="nav-cta">Kontakt</a>
-    </div>
-  </div>
-</nav>
 
-<header class="hero" id="hero">
-  <div class="container hero-grid">
-    <div>
-      <div class="eyebrow">PV-Asset-Management · EEG-Beratung · Photovoltaik-Reinigung · 4K-Dokumentation</div>
-      <h1>PV-Asset-Management, EEG-Beratung und professioneller Objektservice für nachhaltigen Werterhalt</h1>
-      <p>Weinrich Objektservice unterstützt Betreiber von Photovoltaikanlagen sowie Immobilienbesitzer mit einem klaren Schwerpunkt auf <strong>PV-Asset-Management</strong> und fundierter <strong>EEG-Beratung</strong>. Wir helfen dabei, den wirtschaftlichen Betrieb von Anlagen auch nach dem Auslaufen der Förderung zu sichern und kombinieren technische Betreuung mit praktischen Dienstleistungen wie <strong>Photovoltaik-Reinigung</strong>, <strong>Steinreinigung</strong>, <strong>Pflasterreinigung</strong> und <strong>Fassadenreinigung</strong>.</p>
-      <p><a href="#kontakt" style="display:inline-block;background:#16a34a;color:#fff;padding:12px 18px;border-radius:14px;text-decoration:none;font-weight:700;">Jetzt Anfrage stellen</a></p>
-    </div>
-    <aside class="hero-card">
-      <h3>Schwerpunkte auf einen Blick</h3>
-      <ul>
-        <li>PV-Asset-Management für Betreiber</li>
-        <li>EEG-Beratung bei ausgelaufener Förderung</li>
-        <li>Photovoltaik-Reinigung</li>
-        <li>Steinreinigung, Pflasterreinigung & Fassadenreinigung</li>
-      </ul>
-    </aside>
-  </div>
-</header>
+<div class="nav">
+<b>Weinrich Objektservice</b>
+<a href="#kontakt">Kontakt</a>
+</div>
 
-<section class="section section-alt">
-  <div class="container">
-    <div class="headline">
-      <h2>Ihr Partner für Photovoltaik und werterhaltende Reinigung</h2>
-      <p>Ob Photovoltaikanlage, Fassade, Dach oder Steinfläche: Weinrich Objektservice verbindet technische Betreuung, fundierte EEG-Beratung und professionelle Reinigung zu einem ganzheitlichen Leistungsangebot.</p>
-    </div>
-    <div class="stats">
-      <div class="stat"><strong>PV-Asset</strong>Technische und wirtschaftliche Betreuung von Photovoltaikanlagen</div>
-      <div class="stat"><strong>EEG</strong>Photovoltaik nach EEG, EEG ausgelaufen oder endet bald, Weiterbetrieb</div>
-      <div class="stat"><strong>Service</strong>Photovoltaik-Reinigung, Steinreinigung und Fassadenreinigung</div>
-    </div>
-  </div>
-</section>
+<div class="hero">
+<h1>Mehr Ertrag durch saubere PV-Anlagen & klare Entscheidungen nach dem EEG</h1>
+<p>PV-Asset-Management, EEG-Beratung und professionelle Reinigung aus einer Hand</p>
+<a class="btn" href="#kontakt">Jetzt Anfrage stellen</a>
+<p style="margin-top:10px;">Kostenlose Ersteinschätzung möglich</p>
+</div>
 
-<section class="section">
-  <div class="container">
-    <div class="headline">
-      <h2>Drohneninspektion & visuelle Dokumentation</h2>
-      <p>Für Photovoltaikanlagen, Dächer und schwer zugängliche Bereiche setzen wir moderne Drohnentechnik ein. Hochauflösende <strong>4K-Drohnenaufnahmen</strong> ermöglichen eine sichere Sichtprüfung sowie eine klare <strong>Vorher-/Nachher-Dokumentation</strong> der durchgeführten Arbeiten.</p>
-    </div>
-    <div class="grid">
-      <article class="card">
-        <img src="Reinigung_PV-Anlage.jpg" class="service-image">
-<h3>Technische Sichtprüfung</h3>
-        <ul>
-          <li>Visuelle Kontrolle von Photovoltaikanlagen</li>
-          <li>Dach- und Fassadeninspektion</li>
-          <li>Erkennung von Verschmutzungen oder Schäden</li>
-          <li>Unterstützung bei Wartungsentscheidungen</li>
-        </ul>
-      </article>
-      <article class="card">
-        <img src="PV Vorher-Nachher.jfif" class="service-image">
-<h3>4K-Dokumentation</h3>
-        <ul>
-          <li>Vorher-/Nachher-Dokumentation von Reinigungen</li>
-          <li>Übersichtsbilder für Anlagenbetreiber</li>
-          <li>Dokumentation für Wartung und Planung</li>
-          <li>Transparente Darstellung des Anlagenzustands</li>
-        </ul>
-      </article>
-      <article class="card">
-        <img src="Fassadenreinigung Vorher-Nachher.jpg" class="service-image" alt="Vorher-Nachher Fassadenreinigung">
-        <h3>Vorteile</h3>
-        <ul>
-          <li>Schnelle und sichere Kontrolle großer Flächen</li>
-          <li>Keine aufwendigen Gerüste erforderlich</li>
-          <li>Präzise Dokumentation durch 4K-Aufnahmen</li>
-          <li>Ideal für PV-Anlagen, Dächer und Fassaden</li>
-        </ul>
-      </article>
-    </div>
-  </div>
-</section>
+<div class="container">
 
-<section id="leistungen" class="section section-alt">
-  <div class="container">
-    <div class="headline">
-      <h2>Technische Betreuung und Beratung für Photovoltaikanlagen</h2>
-      <p>Der Fokus liegt auf der technischen und wirtschaftlichen Betreuung von Photovoltaikanlagen. Ergänzend bieten wir werterhaltende Reinigungsleistungen für Gebäude und Außenflächen an, damit Anlagen, Dächer und Immobilien langfristig in einem optimalen Zustand bleiben.</p>
-    </div>
-    <div class="grid">
-      <article class="card">
-        <h3>PV-Asset-Management</h3>
-        <p>Ganzheitliche technische und wirtschaftliche Betreuung von Photovoltaikanlagen mit Fokus auf Leistung, Anlagenzustand und nachhaltigen Betrieb.</p>
-        <ul>
-          <li>PV-Asset-Management für Betreiber</li>
-          <li>Dokumentation & Zustandsprüfung</li>
-          <li>Empfehlungen für Reinigung & Wartung</li>
-          <li>Strategische Begleitung nach EEG-Ende</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3>EEG-Beratung & Weiterbetrieb</h3>
-        <p>Ein zentraler Bestandteil unserer Arbeit ist die Beratung zu <strong>EEG ausgelaufen oder endet bald?</strong>, <strong>Photovoltaik nach EEG</strong>, <strong>EEG-Förderung ausgelaufen</strong> und <strong>Weiterbetrieb der PV-Anlage</strong>.</p>
-        <ul>
-          <li>Analyse von Wirtschaftlichkeit & Zustand</li>
-          <li>Beratung bei ausgelaufener EEG-Förderung</li>
-          <li>Optionen für Weiterbetrieb</li>
-          <li>Empfehlungen zu Reinigung und Wartung</li>
-          <li>Betreiberorientierte Begleitung</li>
-        </ul>
-      </article>
-      <article id="pv" class="card">
-        <img src="Steinreinigung Vorher-Nachher.jfif" class="service-image" alt="Vorher-Nachher Steinreinigung">
-        <h3>Reinigungsleistungen rund ums Objekt</h3>
-        <p>Ergänzend bieten wir professionelle Reinigungsleistungen für Photovoltaikanlagen, Dächer, Fassaden sowie Stein- und Pflasterflächen an. Die Ergebnisse werden auf Wunsch mit einer <strong>Vorher-/Nachher-Dokumentation durch 4K-Drohnenaufnahmen</strong> festgehalten.</p>
-        <ul>
-          <li>Photovoltaik-Reinigung</li>
-          <li>Steinreinigung</li>
-          <li>Fassadenreinigung</li>
-          <li>Dachreinigung</li>
-          <li>Gebäudereinigung im Außenbereich</li>
-        </ul>
-      </article>
-    </div>
-  </div>
-</section>
+<div class="card">
+<h2>Photovoltaik Service</h2>
+<img src="PV Vorher-Nachher.jfif">
+<img src="Reinigung_PV-Anlage.jpg">
+</div>
 
-<section id="eeg" class="section">
-  <div class="container">
-    <div class="headline">
-      <h2>PV-Asset-Management und Beratung bei ausgelaufener EEG-Förderung</h2>
-      <p>Als <strong>PV-Asset-Manager</strong> unterstützt Weinrich Objektservice Betreiber bei der technischen Bewertung, Betreuung und Optimierung ihrer Photovoltaikanlagen.</p>
-    </div>
-    <div class="grid">
-      <article class="card">
-        <h3>Technische Betreuung</h3>
-        <ul>
-          <li>Zustandsprüfung von Photovoltaikanlagen</li>
-          <li>Dokumentation der Anlage mit hochauflösenden 4K-Drohnenaufnahmen</li>
-          <li>Analyse von Leistungsverlusten</li>
-          <li>Planung von Reinigung und Wartung</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3>Beratung bei EEG-Ende</h3>
-        <ul>
-          <li>Beratung: EEG ausgelaufen oder endet bald?</li>
-          <li>Optionen für Photovoltaik nach EEG</li>
-          <li>Strategien bei ausgelaufener EEG-Förderung</li>
-          <li>Wirtschaftliche Planung für den Weiterbetrieb der PV-Anlage</li>
-        </ul>
-      </article>
-    </div>
-  </div>
-</section>
+<div class="card">
+<h2>Fassadenreinigung</h2>
+<img src="Fassadenreinigung Vorher-Nachher.jpg">
+</div>
 
-<section class="section">
-  <div class="container">
-    <div class="headline">
-      <h2>Warum Weinrich Objektservice?</h2>
-      <p>Verlässliche Betreuung, saubere Dokumentation und ein klarer Ansprechpartner vor Ort – genau das schafft Vertrauen bei Betreibern, Eigentümern und Kunden.</p>
-    </div>
-    <div class="trust-grid">
-      <div class="trust-item">
-        <h3>Persönlicher Ansprechpartner</h3>
-        <p>Mit Leon Weinrich haben Sie einen direkten Ansprechpartner für Beratung, Dokumentation und Ausführung – ohne anonyme Vermittlung.</p>
-      </div>
-      <div class="trust-item">
-        <h3>4K-Dokumentation per Drohne</h3>
-        <p>Vorher-/Nachher-Aufnahmen sowie Sichtprüfungen werden auf Wunsch mit hochauflösender Drohnentechnik erstellt und nachvollziehbar dokumentiert.</p>
-      </div>
-      <div class="trust-item">
-        <h3>Beratung & Umsetzung aus einer Hand</h3>
-        <p>Von PV-Asset-Management und EEG-Beratung bis zur Photovoltaik-, Dach-, Fassaden- und Steinreinigung erhalten Sie eine durchgängige Betreuung.</p>
-      </div>
-    </div>
-  </div>
-</section>
+<div class="card">
+<h2>Steinreinigung</h2>
+<img src="Steinreinigung Vorher-Nachher.jfif">
+</div>
 
-<section id="kontakt" class="section">
-  <div class="container split">
-    <div class="contact-box">
-      <div style="display:flex; gap:20px; align-items:center; margin-bottom:20px; flex-wrap:wrap;">
-        <img src="Leon Weinrich.JPG" alt="Leon Weinrich" class="profile-image">
-        <div>
-          <h2 style="margin:0 0 6px 0;">Ihr Ansprechpartner</h2>
-          <strong>Leon Weinrich</strong><br>
-          PV-Asset-Management & Objektservice
-        </div>
-      </div>
-      <p>Als Ansprechpartner unterstütze ich Betreiber von Photovoltaikanlagen sowie Immobilienbesitzer bei der technischen Bewertung, Reinigung und wirtschaftlichen Weiterführung ihrer Anlagen.</p>
-      <p><strong>Weinrich Objektservice</strong><br>Leon Weinrich<br>Sudetenstr. 2<br>97199 Ochsenfurt</p>
-      <p>Telefon: <a href="tel:+4916090248569">0160 / 90248569</a><br>E-Mail: <a href="mailto:weinrichobjektservice@gmail.com">weinrichobjektservice@gmail.com</a></p>
-    </div>
-    <div class="card">
-      <h3>Kontaktformular</h3>
-      <form action="mailto:weinrichobjektservice@gmail.com" method="post" enctype="text/plain">
-        <div style="display:grid; gap:14px;">
-          <input type="text" name="Name" placeholder="Name" style="padding:14px 16px; border-radius:14px; border:1px solid #cbd5e1; font:inherit;" required>
-          <input type="tel" name="Telefon" placeholder="Telefon" style="padding:14px 16px; border-radius:14px; border:1px solid #cbd5e1; font:inherit;">
-          <input type="email" name="E-Mail" placeholder="E-Mail" style="padding:14px 16px; border-radius:14px; border:1px solid #cbd5e1; font:inherit;" required>
-          <select name="Leistung" style="padding:14px 16px; border-radius:14px; border:1px solid #cbd5e1; font:inherit; background:#fff;">
-            <option>PV-Beratung-Dienstleistung zur Effizienzsteigerung der Anlage</option>
-            <option>Fassadenreinigung</option>
-            <option>Steinreinigung</option>
-            <option>Dachreinigung</option>
-            <option>Photovoltaik-Reinigung</option>
-          </select>
-          <textarea name="Nachricht" rows="6" placeholder="Beschreiben Sie kurz Ihr Anliegen" style="padding:14px 16px; border-radius:14px; border:1px solid #cbd5e1; font:inherit;"></textarea>
-          <button type="submit" style="display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 20px;border-radius:14px;font-weight:700;background:#16a34a;color:#fff;border:none;cursor:pointer;">Anfrage senden</button>
-        </div>
-      </form>
-    </div>
-  </div>
-</section>
+<div class="card">
+<h2>EEG Beratung</h2>
+<p>EEG ausgelaufen oder endet bald? Wir helfen beim Weiterbetrieb Ihrer PV-Anlage.</p>
+</div>
 
-<footer>
-  <div class="footer-links">
-    <a href="impressum.html">Impressum</a>
-    <a href="datenschutz.html">Datenschutz</a>
-    <a href="eeg-beratung.html">EEG-Beratung</a>
-  </div>
-  <p>© Weinrich Objektservice · PV-Asset-Management · EEG-Beratung · Photovoltaik-Reinigung · Steinreinigung · Fassadenreinigung · Dachreinigung</p>
-</footer>
+<div id="kontakt" class="card">
+<h2>Kontakt</h2>
+<img src="Leon Weinrich.JPG" style="width:150px">
+<p><b>Leon Weinrich</b></p>
 
-<a class="request-float" href="#kontakt">Anfrage</a>
-<a class="whatsapp-float" href="https://wa.me/4916090248569" target="_blank">💬</a>
+<p>✔ Persönliche Betreuung</p>
+<p>✔ 4K Drohnen Dokumentation</p>
+<p>✔ Fokus auf Wirtschaftlichkeit</p>
+
+<p>Telefon: 0160 90248569</p>
+<p>Email: weinrichobjektservice@gmail.com</p>
+</div>
+
+</div>
+
 </body>
 </html>
