@@ -17,7 +17,25 @@
       --radius: 24px;
     }
     * { box-sizing: border-box; }
-    body {
+    body
+    <nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="brand">
+      <img src="Weinrich Objektservice.png" alt="Weinrich Objektservice Logo">
+      <div class="brand-text">
+        <span>Weinrich Objektservice</span>
+        <small>PV-Asset-Management & Reinigung</small>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="leistungen.html">Leistungen</a>
+      <a href="pv-service.html">PV-Service</a>
+      <a href="eeg-beratung.html">EEG-Beratung</a>
+      <a href="kontakt.html" class="nav-cta">Kontakt</a>
+    </div>
+  </div>
+</nav>
+    {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       color: var(--navy);
@@ -28,6 +46,93 @@
       width: min(1120px, calc(100% - 32px));
       margin: 0 auto;
     }
+    .nav {
+  position: relative;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.88);
+  color: var(--navy);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+  color: var(--navy);
+}
+
+.brand img {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.brand-text small {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.nav-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  background: #eef5ff;
+  color: var(--blue);
+}
+
+.nav-cta {
+  background: #ffffff;
+  color: var(--blue) !important;
+  padding: 10px 18px !important;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
+  border: 2px solid var(--blue);
+}
+
+.nav-cta:hover {
+  background: var(--blue);
+  color: #ffffff !important;
+  border-color: var(--blue);
+  box-shadow: 0 8px 22px rgba(29, 78, 216, 0.35);
+  transform: translateY(-1px);
+}
     .hero {
       background: linear-gradient(135deg, rgba(15,23,42,0.94), rgba(29,78,216,0.78));
       color: white;
@@ -141,9 +246,30 @@
       color: var(--muted);
       font-size: 14px;
     }
-    @media (max-width: 900px) {
-      .hero-grid, .split, .grid { grid-template-columns: 1fr; }
-    }
+    @media (max-width:900px){
+  .hero-grid,.split,.grid{grid-template-columns:1fr}
+
+  .nav-inner,
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .brand img {
+    height: 52px;
+  }
+
+  .nav-links {
+    width: 100%;
+    gap: 8px;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 14px;
+  }
+}
   </style>
 </head>
 <body>
@@ -241,6 +367,14 @@
     <div class="container split">
       <div class="contact-box">
         <img src="Leon Weinrich.JPG" alt="Leon Weinrich" class="profile-image">
+        {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 3px solid rgba(255,255,255,0.22);
+  margin-bottom: 0;
+}
         <h2>Beratung anfragen</h2>
         <p>
           Sie möchten einschätzen lassen, wie Ihre Photovoltaikanlage nach dem Auslaufen der EEG-Förderung sinnvoll weiterbetrieben werden kann? Dann nehmen Sie jetzt Kontakt auf.
