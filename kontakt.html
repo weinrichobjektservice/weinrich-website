@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt | Weinrich Objektservice</title>
+  <meta name="description" content="Kontakt zu Weinrich Objektservice – PV-Asset-Management, EEG-Beratung und Reinigungsleistungen." />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #eef5fb;
+      color: #0f172a;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 24px;
+    }
+
+    .nav {
+      background: rgba(255,255,255,0.92);
+      border-bottom: 1px solid #dbe5ef;
+    }
+
+    .nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 14px 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    .brand img {
+      height: 60px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #475569;
+      margin-left: 10px;
+      padding: 8px 14px;
+      border-radius: 999px;
+    }
+
+    .nav-links a:hover {
+      background: #eef5ff;
+      color: #1d4ed8;
+    }
+
+    .nav-cta {
+      border: 2px solid #1d4ed8;
+      color: #1d4ed8 !important;
+      background: #fff;
+    }
+
+    .hero {
+      background: linear-gradient(120deg, rgba(11,18,32,0.86), rgba(29,78,216,0.58));
+      color: #fff;
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .section {
+      padding: 64px 0;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .contact-box,
+    .card {
+      background: #fff;
+      padding: 24px;
+      border-radius: 20px;
+      box-shadow: 0 18px 40px rgba(15,23,42,0.08);
+    }
+
+    .profile-image {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 14px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font: inherit;
+    }
+
+    button {
+      padding: 14px;
+      border: none;
+      border-radius: 10px;
+      background: #16a34a;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    footer {
+      padding: 30px 0 40px;
+      text-align: center;
+      color: #475569;
+    }
+
+    @media (max-width: 900px) {
+      .split {
+        grid-template-columns: 1fr;
+      }
+
+      .nav .container,
+      .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <a href="index.html" class="brand">
+        <img src="Weinrich Objektservice.png" alt="Logo">
+        <span>Weinrich Objektservice</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="leistungen.html">Leistungen</a>
+        <a href="pv-service.html">PV-Service</a>
+        <a href="eeg-beratung.html">EEG-Beratung</a>
+        <a href="kontakt.html" class="nav-cta">Kontakt</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <h1>Kontakt</h1>
+      <p>Jetzt unverbindlich anfragen – wir melden uns schnellstmöglich bei Ihnen.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container split">
+
+      <div class="contact-box">
+        <div style="display:flex; gap:20px; align-items:center; margin-bottom:20px; flex-wrap:wrap;">
+          <img src="Leon Weinrich.JPG" alt="Leon Weinrich" class="profile-image">
+          <div>
+            <h2 style="margin:0;">Ihr Ansprechpartner</h2>
+            <strong>Leon Weinrich</strong><br>
+            PV-Asset-Management & Objektservice
+          </div>
+        </div>
+
+        <p><strong>Adresse:</strong><br>
+        Sudetenstr. 2<br>
+        97199 Ochsenfurt</p>
+
+        <p>
+          Mobil: <a href="tel:+4916090248569">0160 / 90248569</a><br>
+          Festnetz: <a href="tel:+4993130513743">0931 / 30513743</a><br>
+          E-Mail: <a href="mailto:weinrichobjektservice@gmail.com">weinrichobjektservice@gmail.com</a>
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Jetzt Anfrage stellen</h3>
+
+        <form action="mailto:weinrichobjektservice@gmail.com" method="post" enctype="text/plain">
+          <div style="display:grid; gap:14px;">
+            <input type="text" name="Name" placeholder="Name" required>
+            <input type="tel" name="Telefon" placeholder="Telefon">
+            <input type="email" name="E-Mail" placeholder="E-Mail" required>
+            <textarea name="Nachricht" rows="5" placeholder="Ihre Anfrage..."></textarea>
+            <button type="submit">Anfrage senden</button>
+          </div>
+        </form>
+
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <a href="impressum.html">Impressum</a> ·
+    <a href="datenschutz.html">Datenschutz</a>
+  </footer>
+
+</body>
+</html>
