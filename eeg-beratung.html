@@ -3,294 +3,145 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EEG ausgelaufen oder endet bald? | PV-Beratung für den Weiterbetrieb Ihrer Photovoltaikanlage</title>
+  <title>EEG ausgelaufen oder endet bald? | Weinrich Objektservice</title>
   <meta name="description" content="Beratung für Betreiber von Photovoltaikanlagen, wenn die EEG-Förderung ausgelaufen ist oder bald endet. Weinrich Objektservice unterstützt beim Weiterbetrieb, der technischen Bewertung und der Effizienzsteigerung Ihrer Anlage." />
-<style>
-:root {
-  --navy: #0b1220;
-  --blue: #1d4ed8;
-  --green: #16a34a;
-  --muted: #475569;
-  --border: rgba(15, 23, 42, 0.08);
-  --white: #ffffff;
-}
 
-* {
-  box-sizing: border-box;
-}
+  <style>
+    :root {
+      --blue: #1d4ed8;
+      --navy: #0f172a;
+      --muted: #475569;
+      --bg: #f8fbff;
+      --white: #ffffff;
+      --border: rgba(15,23,42,0.08);
+      --shadow: 0 18px 50px rgba(15,23,42,0.10);
+      --radius: 24px;
+    }
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--navy);
-  background: linear-gradient(180deg, #f8fbff 0%, #edf4fb 100%);
-  line-height: 1.65;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-.container {
-  width: min(1120px, calc(100% - 32px));
-  margin: 0 auto;
-}
-
-/* NAVIGATION */
-
-.nav {
-  position: relative;
-  top: 0;
-  z-index: 50;
-  backdrop-filter: blur(16px);
-  background: rgba(255, 255, 255, 0.88);
-  border-bottom: 1px solid var(--border);
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-}
-
-.nav-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 0;
-  gap: 20px;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-  color: var(--navy);
-  font-weight: 700;
-}
-
-.brand img {
-  height: 60px;
-}
-
-.brand-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.brand-text small {
-  font-size: 12px;
-  color: var(--muted);
-}
-
-.nav-links {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.nav-links a {
-  text-decoration: none;
-  padding: 8px 14px;
-  border-radius: 999px;
-  color: var(--muted);
-  font-weight: 600;
-}
-
-.nav-links a:hover {
-  background: #eef5ff;
-  color: var(--blue);
-}
-
-.nav-cta {
-  border: 2px solid var(--blue);
-  color: var(--blue) !important;
-  background: #fff;
-}
-
-/* HERO */
-
-.hero {
-  background: linear-gradient(120deg, rgba(11,18,32,0.86), rgba(29,78,216,0.58));
-  color: #fff;
-  padding: 80px 0;
-  text-align: center;
-}
-
-/* GRID / LAYOUT */
-
-.section {
-  padding: 64px 0;
-}
-
-.split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-}
-
-/* KONTAKT */
-
-.profile-image {
-  width: 110px;
-  height: 110px;
-  object-fit: cover;
-  border-radius: 16px;
-}
-
-.contact-box,
-.card {
-  background: #fff;
-  padding: 24px;
-  border-radius: 20px;
-  box-shadow: 0 18px 40px rgba(15,23,42,0.08);
-}
-
-/* MOBILE */
-
-@media (max-width: 900px) {
-  .split {
-    grid-template-columns: 1fr;
-  }
-
-  .nav-inner,
-  .nav-links {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-links {
-    width: 100%;
-  }
-
-  .nav-links a {
-    width: 100%;
-    text-align: center;
-  }
-}
-</style>
-
-<body>
-
-<nav class="nav">
-  <div class="container nav-inner">
-    <a href="index.html" class="brand">
-      <img src="Weinrich Objektservice.png" alt="Logo">
-      <div class="brand-text">
-        <span>Weinrich Objektservice</span>
-        <small>PV-Asset-Management & Reinigung</small>
-      </div>
-    </a>
-
-    <div class="nav-links">
-      <a href="leistungen.html">Leistungen</a>
-      <a href="pv-service.html">PV-Service</a>
-      <a href="eeg-beratung.html">EEG-Beratung</a>
-      <a href="kontakt.html" class="nav-cta">Kontakt</a>
-    </div>
-  </div>
-</nav>
-    {
+    body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       color: var(--navy);
       background: linear-gradient(180deg, #f8fbff 0%, #edf4fb 100%);
       line-height: 1.65;
     }
+
+    a {
+      color: inherit;
+    }
+
     .container {
       width: min(1120px, calc(100% - 32px));
       margin: 0 auto;
     }
+
+    /* Navigation */
     .nav {
-  position: relative;
-  top: 0;
-  z-index: 50;
-  backdrop-filter: blur(16px);
-  background: rgba(255, 255, 255, 0.88);
-  color: var(--navy);
-  border-bottom: 1px solid var(--border);
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-}
+      position: relative;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(16px);
+      background: rgba(255,255,255,0.88);
+      color: var(--navy);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(15,23,42,0.08);
+    }
 
-.nav-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 0;
-  gap: 20px;
-}
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+      gap: 20px;
+    }
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-weight: 700;
-  letter-spacing: 0.2px;
-  text-decoration: none;
-  color: var(--navy);
-}
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      text-decoration: none;
+      color: var(--navy);
+    }
 
-.brand img {
-  height: 60px;
-  width: auto;
-  display: block;
-}
+    .brand img {
+      height: 60px;
+      width: auto;
+      display: block;
+    }
 
-.brand-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.05;
-}
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
 
-.brand-text small {
-  color: var(--muted);
-  font-size: 12px;
-  font-weight: 600;
-}
+    .brand-text small {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 600;
+    }
 
-.nav-links {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  font-size: 14px;
-  align-items: center;
-}
+    .nav-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      font-size: 14px;
+      align-items: center;
+    }
 
-.nav-links a {
-  text-decoration: none;
-  padding: 8px 14px;
-  border-radius: 999px;
-  transition: all 0.2s ease;
-  color: var(--muted);
-  font-weight: 600;
-}
+    .nav-links a {
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 999px;
+      transition: all 0.2s ease;
+      color: var(--muted);
+      font-weight: 600;
+    }
 
-.nav-links a:hover {
-  background: #eef5ff;
-  color: var(--blue);
-}
+    .nav-links a:hover {
+      background: #eef5ff;
+      color: var(--blue);
+    }
 
-.nav-cta {
-  background: #ffffff;
-  color: var(--blue) !important;
-  padding: 10px 18px !important;
-  border-radius: 999px;
-  font-weight: 700;
-  letter-spacing: 0.2px;
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
-  border: 2px solid var(--blue);
-}
+    .nav-cta {
+      background: #ffffff;
+      color: var(--blue) !important;
+      padding: 10px 18px !important;
+      border-radius: 999px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      box-shadow: 0 6px 18px rgba(15,23,42,0.12);
+      border: 2px solid var(--blue);
+    }
 
-.nav-cta:hover {
-  background: var(--blue);
-  color: #ffffff !important;
-  border-color: var(--blue);
-  box-shadow: 0 8px 22px rgba(29, 78, 216, 0.35);
-  transform: translateY(-1px);
-}
+    .nav-cta:hover {
+      background: var(--blue);
+      color: #ffffff !important;
+      border-color: var(--blue);
+      box-shadow: 0 8px 22px rgba(29,78,216,0.35);
+      transform: translateY(-1px);
+    }
+
+    /* Hero */
     .hero {
       background: linear-gradient(135deg, rgba(15,23,42,0.94), rgba(29,78,216,0.78));
       color: white;
       padding: 88px 0 76px;
     }
+
     .hero-grid {
       display: grid;
       grid-template-columns: 1.2fr 0.8fr;
       gap: 26px;
       align-items: center;
     }
+
     .eyebrow {
       display: inline-block;
       padding: 8px 14px;
@@ -300,22 +151,26 @@ body {
       font-size: 13px;
       margin-bottom: 16px;
     }
+
     h1 {
       margin: 0 0 16px;
       font-size: clamp(34px, 5vw, 58px);
       line-height: 1.05;
     }
+
     .hero p {
       font-size: 18px;
       color: #dbeafe;
       margin: 0 0 24px;
       max-width: 760px;
     }
+
     .actions {
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
     }
+
     .btn {
       display: inline-flex;
       align-items: center;
@@ -325,10 +180,26 @@ body {
       border-radius: 14px;
       font-weight: 700;
       text-decoration: none;
+      transition: transform 0.2s ease, opacity 0.2s ease;
     }
-    .btn-primary { background: #16a34a; color: white; }
-    .btn-secondary { background: rgba(255,255,255,0.12); color: white; border: 1px solid rgba(255,255,255,0.2); }
-    .hero-card, .card {
+
+    .btn:hover {
+      transform: translateY(-1px);
+      opacity: 0.96;
+    }
+
+    .btn-primary {
+      background: #16a34a;
+      color: white;
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.12);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .hero-card {
       background: rgba(255,255,255,0.1);
       border: 1px solid rgba(255,255,255,0.14);
       backdrop-filter: blur(10px);
@@ -336,16 +207,44 @@ body {
       padding: 24px;
       box-shadow: var(--shadow);
     }
-    section { padding: 74px 0; }
-    .section-alt { background: rgba(255,255,255,0.72); }
-    .headline { max-width: 820px; margin-bottom: 24px; }
-    .headline h2 { margin: 0 0 12px; font-size: clamp(28px, 4vw, 42px); line-height: 1.1; }
-    .headline p { margin: 0; color: var(--muted); font-size: 18px; }
+
+    .hero-card h3 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+
+    /* Sections */
+    section {
+      padding: 74px 0;
+    }
+
+    .section-alt {
+      background: rgba(255,255,255,0.72);
+    }
+
+    .headline {
+      max-width: 820px;
+      margin-bottom: 24px;
+    }
+
+    .headline h2 {
+      margin: 0 0 12px;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.1;
+    }
+
+    .headline p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 22px;
     }
+
     .white-card {
       background: var(--white);
       border: 1px solid var(--border);
@@ -354,15 +253,29 @@ body {
       box-shadow: var(--shadow);
       height: 100%;
     }
-    .white-card h3 { margin-top: 0; font-size: 24px; }
-    .white-card p { color: var(--muted); }
-    .white-card ul { margin: 12px 0 0; padding-left: 18px; }
+
+    .white-card h3 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    .white-card p {
+      color: var(--muted);
+    }
+
+    .white-card ul {
+      margin: 12px 0 0;
+      padding-left: 18px;
+    }
+
+    /* Contact */
     .split {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 24px;
       align-items: start;
     }
+
     .contact-box {
       background: linear-gradient(135deg, #0b1220, #1e3a8a);
       color: white;
@@ -370,69 +283,159 @@ body {
       padding: 34px;
       box-shadow: var(--shadow);
     }
-    .contact-box p, .contact-box li { color: #dbeafe; }
+
+    .contact-box p,
+    .contact-box li {
+      color: #dbeafe;
+    }
+
+    .contact-box a {
+      color: #ffffff;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .contact-box a:hover {
+      text-decoration: underline;
+    }
+
     .form-card {
       background: var(--white);
+      border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 26px;
       box-shadow: var(--shadow);
-      border: 1px solid var(--border);
     }
-    input, select, textarea {
+
+    .profile-image {
+      width: 110px;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 3px solid rgba(255,255,255,0.22);
+      margin-bottom: 0;
+    }
+
+    input,
+    select,
+    textarea {
       width: 100%;
       padding: 14px 16px;
-      border-radius: 14px;
+      border-radius: 12px;
       border: 1px solid #cbd5e1;
       font: inherit;
+      background: #ffffff;
+      color: #0f172a;
       margin-bottom: 14px;
-      background: white;
     }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #1d4ed8;
+      box-shadow: 0 0 0 3px rgba(29,78,216,0.12);
+    }
+
+    button {
+      width: 100%;
+      padding: 14px 16px;
+      border: none;
+      border-radius: 12px;
+      background: #16a34a;
+      color: #fff;
+      font-weight: 700;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    button:hover {
+      transform: translateY(-1px);
+      opacity: 0.96;
+    }
+
     footer {
       padding: 30px 0 46px;
       text-align: center;
       color: var(--muted);
       font-size: 14px;
     }
-    @media (max-width:900px){
-  .hero-grid,.split,.grid{grid-template-columns:1fr}
 
-  .nav-inner,
-  .nav-links {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+    @media (max-width: 900px) {
+      .hero-grid,
+      .split,
+      .grid {
+        grid-template-columns: 1fr;
+      }
 
-  .brand img {
-    height: 52px;
-  }
+      .nav-inner,
+      .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
-  .nav-links {
-    width: 100%;
-    gap: 8px;
-  }
+      .brand img {
+        height: 52px;
+      }
 
-  .nav-links a {
-    width: 100%;
-    text-align: center;
-    padding: 10px 14px;
-  }
-}
+      .nav-links {
+        width: 100%;
+        gap: 8px;
+      }
+
+      .nav-links a {
+        width: 100%;
+        text-align: center;
+        padding: 10px 14px;
+      }
+    }
+
+    @media (min-width: 900px) {
+      .nav {
+        position: sticky;
+        top: 0;
+      }
+    }
   </style>
 </head>
 <body>
+
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <img src="Weinrich Objektservice.png" alt="Weinrich Objektservice Logo">
+        <div class="brand-text">
+          <span>Weinrich Objektservice</span>
+          <small>PV-Asset-Management & Reinigung</small>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="leistungen.html">Leistungen</a>
+        <a href="pv-service.html">PV-Service</a>
+        <a href="eeg-beratung.html">EEG-Beratung</a>
+        <a href="kontakt.html" class="nav-cta">Kontakt</a>
+      </div>
+    </div>
+  </nav>
+
   <header class="hero">
     <div class="container hero-grid">
       <div>
         <div class="eyebrow">EEG-Beratung · Weiterbetrieb · PV-Asset-Management</div>
         <h1>EEG ausgelaufen oder endet bald?</h1>
         <p>
-          Wenn die EEG-Förderung Ihrer Photovoltaikanlage ausläuft oder in absehbarer Zeit endet, beginnt eine wichtige Entscheidungsphase. Weinrich Objektservice unterstützt Sie bei der technischen Bewertung, der wirtschaftlichen Einordnung und beim sinnvollen Weiterbetrieb Ihrer Anlage.
+          Wenn die EEG-Förderung Ihrer Photovoltaikanlage ausläuft oder in absehbarer Zeit endet,
+          beginnt eine wichtige Entscheidungsphase. Weinrich Objektservice unterstützt Sie bei der
+          technischen Bewertung, der wirtschaftlichen Einordnung und beim sinnvollen Weiterbetrieb
+          Ihrer Anlage.
         </p>
         <div class="actions">
           <a class="btn btn-primary" href="#kontakt">Jetzt Beratung anfragen</a>
-          <a class="btn btn-secondary" href="#leistungen">Mehr erfahren</a>
+          <a class="btn btn-secondary" href="kontakt.html">Direkt Kontakt</a>
         </div>
       </div>
+
       <aside class="hero-card">
         <h3>Für wen ist diese Beratung gedacht?</h3>
         <ul>
@@ -450,9 +453,12 @@ body {
       <div class="headline">
         <h2>Was passiert nach dem EEG-Ende?</h2>
         <p>
-          Nach dem Auslaufen der Förderung stellt sich für viele Betreiber die Frage, wie die Anlage wirtschaftlich sinnvoll weiterbetrieben werden kann. Genau hier setzt eine strukturierte Beratung an.
+          Nach dem Auslaufen der Förderung stellt sich für viele Betreiber die Frage, wie die Anlage
+          wirtschaftlich sinnvoll weiterbetrieben werden kann. Genau hier setzt eine strukturierte
+          Beratung an.
         </p>
       </div>
+
       <div class="grid">
         <article class="white-card">
           <h3>Technische Bewertung</h3>
@@ -463,6 +469,7 @@ body {
             <li>Bewertung von Verschmutzung und Leistungsverlusten</li>
           </ul>
         </article>
+
         <article class="white-card">
           <h3>Wirtschaftliche Einordnung</h3>
           <p>Wir helfen dabei, den Weiterbetrieb realistisch einzuordnen und die nächsten Schritte klarer zu bewerten.</p>
@@ -472,6 +479,7 @@ body {
             <li>Praxisnahe Handlungsempfehlungen</li>
           </ul>
         </article>
+
         <article class="white-card">
           <h3>Effizienzsteigerung</h3>
           <p>Durch Reinigung, Dokumentation und technische Begleitung lässt sich die Leistungsfähigkeit vieler Anlagen verbessern.</p>
@@ -490,18 +498,23 @@ body {
       <div class="headline">
         <h2>Ihre Vorteile mit Weinrich Objektservice</h2>
         <p>
-          Die Beratung verbindet technisches Verständnis, dokumentierte Sichtprüfung und praktische Umsetzung. So erhalten Sie keine abstrakte Theorie, sondern konkrete Empfehlungen für Ihre Anlage.
+          Die Beratung verbindet technisches Verständnis, dokumentierte Sichtprüfung und praktische
+          Umsetzung. So erhalten Sie keine abstrakte Theorie, sondern konkrete Empfehlungen für Ihre
+          Anlage.
         </p>
       </div>
+
       <div class="grid">
         <article class="white-card">
           <h3>Persönlicher Ansprechpartner</h3>
           <p>Direkte Betreuung durch Leon Weinrich – ohne anonyme Vermittlung.</p>
         </article>
+
         <article class="white-card">
           <h3>Dokumentierte Einschätzung</h3>
           <p>Auf Wunsch mit 4K-Drohnenaufnahmen zur nachvollziehbaren Vorher-/Nachher-Dokumentation.</p>
         </article>
+
         <article class="white-card">
           <h3>Beratung & Umsetzung</h3>
           <p>Von der Einschätzung bis zur Photovoltaik-Reinigung und technischen Sichtprüfung aus einer Hand.</p>
@@ -512,31 +525,41 @@ body {
 
   <section id="kontakt" class="section-alt">
     <div class="container split">
-     <div class="contact-box">
-  <div style="display:flex; gap:18px; align-items:center; margin-bottom:20px; flex-wrap:wrap;">
-    <img src="Leon Weinrich.JPG" alt="Leon Weinrich" class="profile-image">
-    <div>
-      <h2 style="margin:0 0 6px 0;">Beratung anfragen</h2>
-      <strong>Leon Weinrich</strong><br>
-      PV-Asset-Management & Objektservice
-    </div>
-  </div>
+      <div class="contact-box">
+        <div style="display:flex; gap:18px; align-items:center; margin-bottom:20px; flex-wrap:wrap;">
+          <img src="Leon Weinrich.JPG" alt="Leon Weinrich" class="profile-image">
+          <div>
+            <h2 style="margin:0 0 6px 0;">Beratung anfragen</h2>
+            <strong>Leon Weinrich</strong><br>
+            PV-Asset-Management & Objektservice
+          </div>
+        </div>
+
         <p>
-          Sie möchten einschätzen lassen, wie Ihre Photovoltaikanlage nach dem Auslaufen der EEG-Förderung sinnvoll weiterbetrieben werden kann? Dann nehmen Sie jetzt Kontakt auf.
+          Sie möchten einschätzen lassen, wie Ihre Photovoltaikanlage nach dem Auslaufen der
+          EEG-Förderung sinnvoll weiterbetrieben werden kann? Dann nehmen Sie jetzt Kontakt auf.
         </p>
+
         <p>
           <strong>Weinrich Objektservice</strong><br>
           Leon Weinrich<br>
           Sudetenstr. 2<br>
           97199 Ochsenfurt
         </p>
+
         <p>
-          Telefon: <a href="tel:+4916090248569" style="color:#93c5fd;">0160 / 90248569</a><br>
-          E-Mail: <a href="mailto:weinrichobjektservice@gmail.com" style="color:#93c5fd;">weinrichobjektservice@gmail.com</a>
+          Mobil: <a href="tel:+4916090248569">0160 / 90248569</a><br>
+          Festnetz: <a href="tel:+4993130513743">0931 / 30513743</a><br>
+          E-Mail: <a href="mailto:weinrichobjektservice@gmail.com">weinrichobjektservice@gmail.com</a>
         </p>
       </div>
+
       <div class="form-card">
-        <h3>Kontaktformular</h3>
+        <h3 style="margin-top:0; margin-bottom:10px;">Kontaktformular</h3>
+        <p style="margin-top:0; margin-bottom:18px; color:#475569;">
+          Nutzen Sie das Formular für Ihre Anfrage zu EEG-Beratung, Weiterbetrieb oder PV-Service.
+        </p>
+
         <form action="mailto:weinrichobjektservice@gmail.com" method="post" enctype="text/plain">
           <input type="text" name="Name" placeholder="Name" required>
           <input type="tel" name="Telefon" placeholder="Telefon">
@@ -548,7 +571,7 @@ body {
             <option>Technische Sichtprüfung</option>
           </select>
           <textarea name="Nachricht" rows="6" placeholder="Beschreiben Sie kurz Ihre Anlage oder Ihr Anliegen"></textarea>
-          <button type="submit" class="btn btn-primary" style="border:none; cursor:pointer; width:100%;">Anfrage senden</button>
+          <button type="submit">Anfrage senden</button>
         </form>
       </div>
     </div>
@@ -562,5 +585,6 @@ body {
     </div>
     © Weinrich Objektservice · EEG-Beratung · PV-Asset-Management · Photovoltaik-Reinigung
   </footer>
+
 </body>
 </html>
