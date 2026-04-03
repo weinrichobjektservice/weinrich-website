@@ -5,28 +5,175 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EEG ausgelaufen oder endet bald? | PV-Beratung für den Weiterbetrieb Ihrer Photovoltaikanlage</title>
   <meta name="description" content="Beratung für Betreiber von Photovoltaikanlagen, wenn die EEG-Förderung ausgelaufen ist oder bald endet. Weinrich Objektservice unterstützt beim Weiterbetrieb, der technischen Bewertung und der Effizienzsteigerung Ihrer Anlage." />
-  <style>
-    :root {
-      --blue: #1d4ed8;
-      --navy: #0f172a;
-      --muted: #475569;
-      --bg: #f8fbff;
-      --white: #ffffff;
-      --border: rgba(15,23,42,0.08);
-      --shadow: 0 18px 50px rgba(15,23,42,0.10);
-      --radius: 24px;
-    }
-    * { box-sizing: border-box; }
-    body
-    <nav class="nav">
+<style>
+:root {
+  --navy: #0b1220;
+  --blue: #1d4ed8;
+  --green: #16a34a;
+  --muted: #475569;
+  --border: rgba(15, 23, 42, 0.08);
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--navy);
+  background: linear-gradient(180deg, #f8fbff 0%, #edf4fb 100%);
+  line-height: 1.65;
+}
+
+.container {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+/* NAVIGATION */
+
+.nav {
+  position: relative;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.88);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.brand img {
+  height: 60px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-text small {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.nav-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 999px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  background: #eef5ff;
+  color: var(--blue);
+}
+
+.nav-cta {
+  border: 2px solid var(--blue);
+  color: var(--blue) !important;
+  background: #fff;
+}
+
+/* HERO */
+
+.hero {
+  background: linear-gradient(120deg, rgba(11,18,32,0.86), rgba(29,78,216,0.58));
+  color: #fff;
+  padding: 80px 0;
+  text-align: center;
+}
+
+/* GRID / LAYOUT */
+
+.section {
+  padding: 64px 0;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+/* KONTAKT */
+
+.profile-image {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.contact-box,
+.card {
+  background: #fff;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 18px 40px rgba(15,23,42,0.08);
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-inner,
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    width: 100%;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+  }
+}
+</style>
+
+<body>
+
+<nav class="nav">
   <div class="container nav-inner">
     <a href="index.html" class="brand">
-      <img src="Weinrich Objektservice.png" alt="Weinrich Objektservice Logo">
+      <img src="Weinrich Objektservice.png" alt="Logo">
       <div class="brand-text">
         <span>Weinrich Objektservice</span>
         <small>PV-Asset-Management & Reinigung</small>
       </div>
     </a>
+
     <div class="nav-links">
       <a href="leistungen.html">Leistungen</a>
       <a href="pv-service.html">PV-Service</a>
