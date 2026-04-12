@@ -41,23 +41,24 @@
     }
 
     .nav {
-      position: relative;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(16px);
-      background: rgba(255, 255, 255, 0.88);
-      color: var(--ink);
-      border-bottom: 1px solid var(--border);
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-    }
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  transition: all 0.25s ease;
+}
 
     .nav-inner {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 0;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 0;
+  transition: all 0.25s ease;
+}
 
     .brand {
       display: flex;
@@ -68,12 +69,11 @@
     }
 
     .brand img {
-      height: 225px;
-      width: auto;
-      display: block;
-      margin: 0 auto;
-     margin-top: -8px;
-  margin-bottom: -6px;
+  height: 225px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  transition: height 0.25s ease, margin 0.25s ease;
 }
 
     .nav-links {
