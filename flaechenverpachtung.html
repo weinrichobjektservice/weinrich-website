@@ -320,7 +320,7 @@
       }
 
       .brand img {
-        height: 72px;
+        height: 82px;
       }
 
       .nav-links {
@@ -425,7 +425,7 @@
         Vorbereitung und Begleitung im Austausch mit Projektentwicklern.
       </p>
       <div class="actions">
-        <a class="btn btn-primary" href="kontakt.html">Fläche unverbindlich anfragen</a>
+        <a class="btn btn-primary" href="#kontaktformular">Fläche unverbindlich anfragen</a>
         <a class="btn btn-secondary" href="leistungen.html">Weitere Leistungen</a>
       </div>
     </div>
@@ -514,8 +514,8 @@
     </div>
   </section>
 
-  <section class="section">
-    <div class="container split">
+  <section id="kontaktformular" class="section">
+  <div class="container split">
 
       <div class="highlight">
         <h2>Wichtiger Hinweis zur Projektumsetzung</h2>
@@ -665,6 +665,15 @@
     lastScrollY = currentScrollY;
   });
 </script>
+  
+<script>
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
 
+  menuToggle.addEventListener("click", function () {
+    navLinks.classList.toggle("menu-open");
+  });
+</script>
+  
 </body>
 </html>
