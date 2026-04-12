@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Flächenverpachtung für PV | Weinrich Objektservice</title>
-  <meta name="description" content="Beratung und Begleitung zur Flächenverpachtung für Photovoltaik. Weinrich Objektservice unterstützt Eigentümer bei der Ersteinschätzung, Unterlagenprüfung und strukturierten Vorbereitung für PV-Projekte." />
+  <meta name="description" content="Beratung und Begleitung zur Flächenverpachtung für Photovoltaik. Weinrich Objektservice unterstützt Eigentümer bei der Ersteinschätzung, strukturierten Vorbereitung und Projektprüfung." />
+
   <style>
     :root {
       --navy: #0b1220;
@@ -18,7 +19,9 @@
       --radius: 24px;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
@@ -28,124 +31,95 @@
       line-height: 1.65;
     }
 
-    a { color: inherit; }
+    a {
+      color: inherit;
+    }
 
     .container {
       width: min(1160px, calc(100% - 32px));
       margin: 0 auto;
     }
 
-   .nav {
-  position: relative;
-  top: 0;
-  z-index: 50;
-  backdrop-filter: blur(16px);
-  background: rgba(255, 255, 255, 0.88);
-  color: var(--ink);
-  border-bottom: 1px solid var(--border);
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-}
+    .nav {
+      position: relative;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(16px);
+      background: rgba(255, 255, 255, 0.88);
+      color: var(--ink);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    }
 
-.nav-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  padding: 14px 0;
-}
+    .nav-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 0;
+    }
 
-.brand {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  text-decoration: none;
-}
+    .brand {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      text-decoration: none;
+    }
 
-.brand img {
-  height: 95px;
-  width: auto;
-  display: block;
-  margin: 0 auto;
-}
+    .brand img {
+      height: 95px;
+      width: auto;
+      display: block;
+      margin: 0 auto;
+    }
 
-.nav-links {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-  font-size: 14px;
-  align-items: center;
-}
+    .nav-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      font-size: 14px;
+      align-items: center;
+    }
 
-.nav-links a {
-  text-decoration: none;
-  padding: 8px 14px;
-  border-radius: 999px;
-  transition: all 0.2s ease;
-  color: var(--muted);
-  font-weight: 600;
-}
+    .nav-links a {
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 999px;
+      transition: all 0.2s ease;
+      color: var(--muted);
+      font-weight: 600;
+    }
 
-.nav-links a:hover {
-  background: #eef5ff;
-  color: var(--blue);
-}
+    .nav-links a:hover {
+      background: #eef5ff;
+      color: var(--blue);
+    }
 
-.nav-cta {
-  background: #ffffff;
-  color: var(--blue) !important;
-  padding: 10px 18px !important;
-  border-radius: 999px;
-  font-weight: 700;
-  letter-spacing: 0.2px;
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
-  border: 2px solid var(--blue);
-}
+    .nav-cta {
+      background: #ffffff;
+      color: var(--blue) !important;
+      padding: 10px 18px !important;
+      border-radius: 999px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
+      border: 2px solid var(--blue);
+    }
 
-.nav-cta:hover {
-  background: var(--blue);
-  color: #ffffff !important;
-  border-color: var(--blue);
-  box-shadow: 0 8px 22px rgba(29, 78, 216, 0.35);
-  transform: translateY(-1px);
-}
-
-@media (max-width: 720px) {
-  .nav-inner,
-  .nav-links {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .brand img {
-    height: 72px;
-  }
-
-  .nav-links {
-    width: 100%;
-    gap: 8px;
-  }
-
-  .nav-links a {
-    width: 100%;
-    text-align: center;
-    padding: 10px 14px;
-  }
-}
-
-@media (min-width: 900px) {
-  .nav {
-    position: sticky;
-    top: 0;
-  }
-}
+    .nav-cta:hover {
+      background: var(--blue);
+      color: #ffffff !important;
+      border-color: var(--blue);
+      box-shadow: 0 8px 22px rgba(29, 78, 216, 0.35);
+      transform: translateY(-1px);
     }
 
     .hero {
       background:
-        linear-gradient(120deg, rgba(11,18,32,0.86), rgba(29,78,216,0.58)),
+        linear-gradient(120deg, rgba(11, 18, 32, 0.86), rgba(29, 78, 216, 0.58)),
         url('Reinigung_PV-Anlage.jpg') center/cover;
       color: var(--white);
       padding: 95px 0 85px;
@@ -156,8 +130,8 @@
       display: inline-block;
       padding: 8px 14px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.14);
       font-size: 13px;
       margin-bottom: 16px;
     }
@@ -206,9 +180,9 @@
     }
 
     .btn-secondary {
-      background: rgba(255,255,255,0.12);
+      background: rgba(255, 255, 255, 0.12);
       color: var(--white);
-      border: 1px solid rgba(255,255,255,0.2);
+      border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     .section {
@@ -216,7 +190,7 @@
     }
 
     .section-alt {
-      background: rgba(255,255,255,0.72);
+      background: rgba(255, 255, 255, 0.72);
     }
 
     .headline {
@@ -241,12 +215,12 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 22px;
     }
-    
+
     .split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  align-items: start;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: start;
     }
 
     .card {
@@ -287,13 +261,6 @@
       box-shadow: var(--shadow);
     }
 
-    .split {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      align-items: start;
-    }
-
     .contact-box {
       background: linear-gradient(135deg, #0b1220, #1e3a8a);
       color: var(--white);
@@ -317,6 +284,14 @@
       text-decoration: underline;
     }
 
+    .profile-image {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 3px solid rgba(255, 255, 255, 0.25);
+    }
+
     footer {
       padding: 30px 0 46px;
       color: var(--muted);
@@ -325,9 +300,9 @@
     }
 
     @media (max-width: 980px) {
-  .grid,
-  .split {
-    grid-template-columns: 1fr;
+      .grid,
+      .split {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -335,11 +310,11 @@
       .nav-inner,
       .nav-links {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
       }
 
       .brand img {
-        height: 56px;
+        height: 72px;
       }
 
       .nav-links {
@@ -393,6 +368,11 @@
         border-radius: 18px;
       }
 
+      .profile-image {
+        width: 110px;
+        height: 110px;
+      }
+
       .headline h2 {
         font-size: 30px;
       }
@@ -414,20 +394,20 @@
 <body>
 
   <nav class="nav">
-  <div class="container nav-inner">
-    <a href="index.html" class="brand">
-      <img src="Weinrich Objektservice.png" alt="Weinrich Objektservice Logo">
-    </a>
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <img src="Weinrich Objektservice.png" alt="Weinrich Objektservice Logo">
+      </a>
 
-    <div class="nav-links">
-      <a href="leistungen.html">Leistungen</a>
-      <a href="pv-service.html">PV-Service</a>
-      <a href="flaechenverpachtung.html">Flächenverpachtung</a>
-      <a href="eeg-beratung.html">EEG-Beratung</a>
-      <a href="kontakt.html" class="nav-cta">Kontakt</a>
+      <div class="nav-links">
+        <a href="leistungen.html">Leistungen</a>
+        <a href="pv-service.html">PV-Service</a>
+        <a href="flaechenverpachtung.html">Flächenverpachtung</a>
+        <a href="eeg-beratung.html">EEG-Beratung</a>
+        <a href="kontakt.html" class="nav-cta">Kontakt</a>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
   <header class="hero">
     <div class="container">
@@ -528,107 +508,124 @@
     </div>
   </section>
 
- <section class="section">
-  <div class="container split">
+  <section class="section">
+    <div class="container split">
 
-    <div class="highlight">
-      <h2>Wichtiger Hinweis zur Projektumsetzung</h2>
+      <div class="highlight">
+        <h2>Wichtiger Hinweis zur Projektumsetzung</h2>
 
-      <p>
-        Ob ein Photovoltaikprojekt tatsächlich umgesetzt werden kann, hängt immer von mehreren Faktoren ab.
-        Dazu zählen unter anderem die planungsrechtliche Situation, der Netzanschluss, die Größe der Fläche
-        sowie die wirtschaftlichen Rahmenbedingungen.
-      </p>
+        <p>
+          Ob ein Photovoltaikprojekt tatsächlich umgesetzt werden kann, hängt immer von mehreren Faktoren ab.
+          Dazu zählen unter anderem die planungsrechtliche Situation, der Netzanschluss, die Größe der Fläche
+          sowie die wirtschaftlichen Rahmenbedingungen.
+        </p>
 
-      <p>
-        Gerade bei Freiflächenprojekten gelten zusätzliche Vorgaben und Prüfungen. Deshalb ist eine saubere
-        Ersteinschätzung besonders wichtig, bevor Gespräche mit Projektentwicklern vertieft werden.
-      </p>
+        <p>
+          Gerade bei Freiflächenprojekten gelten zusätzliche Vorgaben und Prüfungen. Deshalb ist eine saubere
+          Ersteinschätzung besonders wichtig, bevor Gespräche mit Projektentwicklern vertieft werden.
+        </p>
 
-      <p>
-        Der Ausbau von Photovoltaik – auch auf Freiflächen – wird politisch weiter beschleunigt,
-        unter anderem durch das Solarpaket I. Dadurch entstehen zusätzliche Chancen für Eigentümer
-        geeigneter Dach- und Freiflächen.
-      </p>
+        <p>
+          Der Ausbau von Photovoltaik – auch auf Freiflächen – wird politisch weiter beschleunigt,
+          unter anderem durch das Solarpaket I. Dadurch entstehen zusätzliche Chancen für Eigentümer
+          geeigneter Dach- und Freiflächen.
+        </p>
 
-      <p>
-        Je nach Projekt können außerdem Förder- und Finanzierungsbausteine eine Rolle spielen.
-        Entscheidend ist immer die konkrete Ausgangslage Ihrer Fläche.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>Unser Ansatz</h3>
-
-      <p>
-        Wir arbeiten praxisnah und eigentümerorientiert. Das bedeutet:
-        keine pauschalen Versprechen, sondern eine strukturierte Vorbereitung
-        und eine realistische Einschätzung Ihrer Möglichkeiten.
-      </p>
-
-      <ul>
-        <li>Verständliche Einordnung statt Fachchinesisch</li>
-        <li>Saubere Vorbereitung für weitere Gespräche</li>
-        <li>Begleitung aus Sicht des Eigentümers</li>
-      </ul>
-
-      <div style="margin-top:18px;">
-        <strong>Unverbindliche Ersteinschätzung:</strong>
-        <p style="margin-top:8px;">
-          Sie möchten wissen, ob Ihre Fläche grundsätzlich geeignet ist?
-          Wir unterstützen Sie bei einer ersten strukturierten Einschätzung
-          und der Vorbereitung für Gespräche mit Projektentwicklern.
+        <p>
+          Je nach Projekt können außerdem Förder- und Finanzierungsbausteine eine Rolle spielen.
+          Entscheidend ist immer die konkrete Ausgangslage Ihrer Fläche.
         </p>
       </div>
 
-    </div>
+      <div class="card">
+        <h3>Unser Ansatz</h3>
 
-  </div>
-</section>
+        <p>
+          Wir arbeiten praxisnah und eigentümerorientiert. Das bedeutet:
+          keine pauschalen Versprechen, sondern eine strukturierte Vorbereitung
+          und eine realistische Einschätzung Ihrer Möglichkeiten.
+        </p>
 
-  <section class="section">
-  <div class="container split">
+        <ul>
+          <li>Verständliche Einordnung statt Fachchinesisch</li>
+          <li>Saubere Vorbereitung für weitere Gespräche</li>
+          <li>Begleitung aus Sicht des Eigentümers</li>
+        </ul>
 
-    <div class="contact-box">
-      <div style="display:flex; gap:20px; align-items:center; margin-bottom:20px; flex-wrap:wrap;">
-        <img src="Leon Weinrich.JPG" alt="Leon Weinrich" class="profile-image">
-        <div>
-          <h2 style="margin:0 0 6px 0;">Ihr Ansprechpartner</h2>
-          <strong>Leon Weinrich</strong><br>
-          PV-Asset-Management & Objektservice
+        <div style="margin-top:18px;">
+          <strong>Unverbindliche Ersteinschätzung:</strong>
+          <p style="margin-top:8px;">
+            Sie möchten wissen, ob Ihre Fläche grundsätzlich geeignet ist?
+            Wir unterstützen Sie bei einer ersten strukturierten Einschätzung
+            und der Vorbereitung für Gespräche mit Projektentwicklern.
+          </p>
         </div>
       </div>
 
-      <p>
-        Ich unterstütze Sie bei der technischen Bewertung, Reinigung, EEG-Beratung und
-        der Prüfung von Flächen für PV-Projekte.
-      </p>
-
-      <p>
-        <strong>Weinrich Objektservice</strong><br>
-        Leon Weinrich<br>
-        Sudetenstr. 2<br>
-        97199 Ochsenfurt
-      </p>
-
-      <p>
-        <strong>Telefon:</strong><br>
-        Mobil: <a href="tel:+4916090248569">0160 / 90248569</a><br>
-        Festnetz: <a href="tel:+4993130513743">0931 / 30513743</a><br>
-        E-Mail: <a href="mailto:weinrichobjektservice@gmail.com">weinrichobjektservice@gmail.com</a>
-      </p>
     </div>
-    
-      <div class="card">
-        <h3>Welche Angaben hilfreich sind</h3>
-        <ul>
-          <li>Art der Fläche: Dach oder Freifläche</li>
-          <li>Ort oder grobe Lage</li>
-          <li>ungefähre Größe der Fläche</li>
-          <li>vorhandene Fotos oder Unterlagen</li>
-          <li>ggf. bisherige Gespräche oder Interessenbekundungen</li>
-        </ul>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+
+      <div class="contact-box">
+        <div style="display:flex; gap:20px; align-items:center; margin-bottom:20px; flex-wrap:wrap;">
+          <img src="Leon Weinrich.JPG" alt="Leon Weinrich" class="profile-image">
+          <div>
+            <h2 style="margin:0 0 6px 0;">Ihr Ansprechpartner</h2>
+            <strong>Leon Weinrich</strong><br>
+            PV-Asset-Management & Objektservice
+          </div>
+        </div>
+
+        <p>
+          Ich unterstütze Sie bei der technischen Bewertung, Reinigung, EEG-Beratung und
+          der Prüfung von Flächen für PV-Projekte.
+        </p>
+
+        <p>
+          <strong>Weinrich Objektservice</strong><br>
+          Leon Weinrich<br>
+          Sudetenstr. 2<br>
+          97199 Ochsenfurt
+        </p>
+
+        <p>
+          <strong>Telefon:</strong><br>
+          Mobil: <a href="tel:+4916090248569">0160 / 90248569</a><br>
+          Festnetz: <a href="tel:+4993130513743">0931 / 30513743</a><br>
+          E-Mail: <a href="mailto:weinrichobjektservice@gmail.com">weinrichobjektservice@gmail.com</a>
+        </p>
       </div>
+
+      <div class="card">
+        <h3>Kontaktformular</h3>
+
+        <form action="mailto:weinrichobjektservice@gmail.com" method="post" enctype="text/plain">
+          <div style="display:grid; gap:14px;">
+            <input type="text" name="Name" placeholder="Name" style="padding:14px 16px; border-radius:14px; border:1px solid #cbd5e1; font:inherit;" required>
+            <input type="tel" name="Telefon" placeholder="Telefon" style="padding:14px 16px; border-radius:14px; border:1px solid #cbd5e1; font:inherit;">
+            <input type="email" name="E-Mail" placeholder="E-Mail" style="padding:14px 16px; border-radius:14px; border:1px solid #cbd5e1; font:inherit;" required>
+
+            <select name="Leistung" style="padding:14px 16px; border-radius:14px; border:1px solid #cbd5e1; font:inherit; background:#fff;">
+              <option>Flächenverpachtung / PV-Projektprüfung</option>
+              <option>EEG-Beratung</option>
+              <option>Photovoltaik-Reinigung</option>
+              <option>PV-Asset-Management</option>
+              <option>Fassadenreinigung</option>
+              <option>Steinreinigung</option>
+              <option>Dachreinigung</option>
+            </select>
+
+            <textarea name="Nachricht" rows="6" placeholder="Beschreiben Sie kurz Ihre Fläche oder Ihr Anliegen" style="padding:14px 16px; border-radius:14px; border:1px solid #cbd5e1; font:inherit;"></textarea>
+
+            <button type="submit" style="display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 20px;border-radius:14px;font-weight:700;background:#16a34a;color:#fff;border:none;cursor:pointer;">
+              Anfrage senden
+            </button>
+          </div>
+        </form>
+      </div>
+
     </div>
   </section>
 
