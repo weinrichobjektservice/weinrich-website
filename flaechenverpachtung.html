@@ -35,91 +35,112 @@
       margin: 0 auto;
     }
 
-    .nav {
-      position: relative;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(16px);
-      background: rgba(255,255,255,0.88);
-      color: var(--ink);
-      border-bottom: 1px solid var(--border);
-      box-shadow: 0 10px 30px rgba(15,23,42,0.08);
-    }
+   .nav {
+  position: relative;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.88);
+  color: var(--ink);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
 
-    .nav-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 14px 0;
-      gap: 20px;
-    }
+.nav-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0;
+}
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 700;
-      letter-spacing: 0.2px;
-      text-decoration: none;
-    }
+.brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+}
 
-    .brand img {
-      height: 72px;
-      width: auto;
-      display: block;
-    }
+.brand img {
+  height: 95px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
 
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.05;
-    }
+.nav-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  font-size: 14px;
+  align-items: center;
+}
 
-    .brand-text small {
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 600;
-    }
+.nav-links a {
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+  color: var(--muted);
+  font-weight: 600;
+}
 
-    .nav-links {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      font-size: 14px;
-      align-items: center;
-    }
+.nav-links a:hover {
+  background: #eef5ff;
+  color: var(--blue);
+}
 
-    .nav-links a {
-      text-decoration: none;
-      padding: 8px 14px;
-      border-radius: 999px;
-      transition: all 0.2s ease;
-      color: var(--muted);
-      font-weight: 600;
-    }
+.nav-cta {
+  background: #ffffff;
+  color: var(--blue) !important;
+  padding: 10px 18px !important;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
+  border: 2px solid var(--blue);
+}
 
-    .nav-links a:hover {
-      background: #eef5ff;
-      color: var(--blue);
-    }
+.nav-cta:hover {
+  background: var(--blue);
+  color: #ffffff !important;
+  border-color: var(--blue);
+  box-shadow: 0 8px 22px rgba(29, 78, 216, 0.35);
+  transform: translateY(-1px);
+}
 
-    .nav-cta {
-      background: #ffffff;
-      color: var(--blue) !important;
-      padding: 10px 18px !important;
-      border-radius: 999px;
-      font-weight: 700;
-      letter-spacing: 0.2px;
-      box-shadow: 0 6px 18px rgba(15,23,42,0.12);
-      border: 2px solid var(--blue);
-    }
+@media (max-width: 720px) {
+  .nav-inner,
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .nav-cta:hover {
-      background: var(--blue);
-      color: #ffffff !important;
-      border-color: var(--blue);
-      box-shadow: 0 8px 22px rgba(29,78,216,0.35);
-      transform: translateY(-1px);
+  .brand img {
+    height: 72px;
+  }
+
+  .nav-links {
+    width: 100%;
+    gap: 8px;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 14px;
+  }
+}
+
+@media (min-width: 900px) {
+  .nav {
+    position: sticky;
+    top: 0;
+  }
+}
     }
 
     .hero {
@@ -393,23 +414,20 @@
 <body>
 
   <nav class="nav">
-    <div class="container nav-inner">
-      <a href="index.html" class="brand">
-        <img src="Weinrich Objektservice.png" alt="Weinrich Objektservice Logo">
-        <div class="brand-text">
-          <span>Weinrich Objektservice</span>
-          <small>PV-Asset-Management & Reinigung</small>
-        </div>
-      </a>
-      <div class="nav-links">
-        <a href="leistungen.html">Leistungen</a>
-        <a href="pv-service.html">PV-Service</a>
-        <a href="flaechenverpachtung.html">Flächenverpachtung</a>
-        <a href="eeg-beratung.html">EEG-Beratung</a>
-        <a href="kontakt.html" class="nav-cta">Kontakt</a>
-      </div>
+  <div class="container nav-inner">
+    <a href="index.html" class="brand">
+      <img src="Weinrich Objektservice.png" alt="Weinrich Objektservice Logo">
+    </a>
+
+    <div class="nav-links">
+      <a href="leistungen.html">Leistungen</a>
+      <a href="pv-service.html">PV-Service</a>
+      <a href="flaechenverpachtung.html">Flächenverpachtung</a>
+      <a href="eeg-beratung.html">EEG-Beratung</a>
+      <a href="kontakt.html" class="nav-cta">Kontakt</a>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <header class="hero">
     <div class="container">
@@ -568,27 +586,39 @@
   </div>
 </section>
 
-  <section class="section section-alt">
-    <div class="container split">
-      <div class="contact-box">
-        <h2 style="margin-top:0;">Fläche unverbindlich prüfen lassen</h2>
-        <p>
-          Wenn Sie eine Dach- oder Freifläche besitzen und prüfen möchten, ob eine Verpachtung für
-          Photovoltaik grundsätzlich in Betracht kommt, nehmen Sie gerne Kontakt auf.
-        </p>
-        <p>
-          <strong>Weinrich Objektservice</strong><br>
-          Leon Weinrich<br>
-          Sudetenstr. 2<br>
-          97199 Ochsenfurt
-        </p>
-        <p>
-          Mobil: <a href="tel:+4916090248569">0160 / 90248569</a><br>
-          Festnetz: <a href="tel:+4993130513743">0931 / 30513743</a><br>
-          E-Mail: <a href="mailto:weinrichobjektservice@gmail.com">weinrichobjektservice@gmail.com</a>
-        </p>
+  <section class="section">
+  <div class="container split">
+
+    <div class="contact-box">
+      <div style="display:flex; gap:20px; align-items:center; margin-bottom:20px; flex-wrap:wrap;">
+        <img src="Leon Weinrich.JPG" alt="Leon Weinrich" class="profile-image">
+        <div>
+          <h2 style="margin:0 0 6px 0;">Ihr Ansprechpartner</h2>
+          <strong>Leon Weinrich</strong><br>
+          PV-Asset-Management & Objektservice
+        </div>
       </div>
 
+      <p>
+        Ich unterstütze Sie bei der technischen Bewertung, Reinigung, EEG-Beratung und
+        der Prüfung von Flächen für PV-Projekte.
+      </p>
+
+      <p>
+        <strong>Weinrich Objektservice</strong><br>
+        Leon Weinrich<br>
+        Sudetenstr. 2<br>
+        97199 Ochsenfurt
+      </p>
+
+      <p>
+        <strong>Telefon:</strong><br>
+        Mobil: <a href="tel:+4916090248569">0160 / 90248569</a><br>
+        Festnetz: <a href="tel:+4993130513743">0931 / 30513743</a><br>
+        E-Mail: <a href="mailto:weinrichobjektservice@gmail.com">weinrichobjektservice@gmail.com</a>
+      </p>
+    </div>
+    
       <div class="card">
         <h3>Welche Angaben hilfreich sind</h3>
         <ul>
