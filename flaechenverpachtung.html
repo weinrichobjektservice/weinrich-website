@@ -343,23 +343,20 @@
 
   .nav-inner {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
     gap: 0;
     padding: 8px 0;
   }
 
-  .brand {
-    justify-content: flex-start;
-    width: auto;
-    pointer-events: none;
-    cursor: default;
-  }
-
-      .brand {
-        justify-content: flex-start;
-        width: auto;
-      }
+ .brand {
+  grid-column: 2;
+  justify-self: center;
+  justify-content: center;
+  width: auto;
+  pointer-events: none;
+  cursor: default;
+}
 
       .brand img {
         height: 100px;
