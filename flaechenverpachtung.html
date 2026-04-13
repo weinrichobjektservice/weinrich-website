@@ -45,7 +45,7 @@
   top: 0;
   z-index: 50;
   backdrop-filter: blur(14px);
-  background: rgba(255, 255, 255, 0.88);
+  background: rgba(255, 255, 255, 0.92);
   border-bottom: 1px solid rgba(0,0,0,0.06);
   box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
   transition: transform 0.28s ease, background 0.25s ease, box-shadow 0.25s ease;
@@ -63,7 +63,7 @@
   padding: 0;
 }
 
-    .brand {
+.brand {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,8 +91,7 @@
   padding-bottom: 6px;
 }
 
-
-    .nav-links a {
+.nav-links a {
   text-decoration: none;
   padding: 4px 10px;
   border-radius: 999px;
@@ -118,14 +117,71 @@
   border: 2px solid var(--blue);
 }
 
-
-  .nav-cta:hover {
+.nav-cta:hover {
   background: var(--blue);
   color: #ffffff !important;
   border-color: var(--blue);
   box-shadow: 0 8px 22px rgba(29, 78, 216, 0.35);
   transform: translateY(-1px);
 }
+
+.menu-toggle {
+  display: none;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: #ffffff;
+  color: var(--ink);
+  border-radius: 12px;
+  padding: 8px 12px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Mobile Header wie klassisches Hamburger-Menü */
+@media (max-width: 720px) {
+  .nav-inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 0;
+    padding: 8px 0;
+  }
+
+  .brand {
+    justify-content: flex-start;
+    width: auto;
+  }
+
+  .brand img {
+    height: 64px;
+    margin: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    justify-self: end;
+  }
+
+  .nav-links {
+    display: none;
+    grid-column: 1 / -1;
+    margin-top: 8px;
+    padding: 0 0 8px 0;
+    width: 100%;
+  }
+
+  .nav-links.menu-open {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 10px 14px;
+    font-size: 14px;
+  }
 
     .hero {
       background:
