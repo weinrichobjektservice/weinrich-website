@@ -8,15 +8,15 @@
 
   <style>
     :root {
-      --navy: #0b1220;
       --blue: #1d4ed8;
-      --green: #16a34a;
-      --ink: #0f172a;
+      --navy: #0f172a;
       --muted: #475569;
       --white: #ffffff;
-      --border: rgba(15, 23, 42, 0.08);
-      --shadow: 0 20px 60px rgba(15, 23, 42, 0.10);
+      --border: rgba(15,23,42,0.08);
+      --shadow: 0 20px 60px rgba(15,23,42,0.10);
       --radius: 24px;
+      --green: #16a34a;
+      --ink: #0f172a;
     }
 
     * {
@@ -32,8 +32,8 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      color: var(--ink);
-      background: linear-gradient(180deg, #f8fbff 0%, #eef5fb 100%);
+      color: var(--navy);
+      background: linear-gradient(180deg, #f8fbff 0%, #edf4fb 100%);
       line-height: 1.65;
     }
 
@@ -79,7 +79,7 @@
     }
 
     .brand img {
-      height: 225px;
+      height: 92px;
       width: auto;
       display: block;
       margin: 0 auto;
@@ -134,24 +134,32 @@
 
     .menu-toggle {
       display: none;
+      width: 46px;
+      min-width: 46px;
+      max-width: 46px;
+      height: 46px;
+      min-height: 46px;
+      max-height: 46px;
+      padding: 0;
       border: 1px solid rgba(15, 23, 42, 0.12);
       background: #ffffff;
       color: #0f172a;
-      border-radius: 12px;
-      padding: 8px 12px;
-      font-size: 22px;
-      width: 46px;
-      height: 46px;
+      border-radius: 10px;
+      font-size: 20px;
+      line-height: 1;
+      box-sizing: border-box;
+      align-items: center;
+      justify-content: center;
       cursor: pointer;
     }
 
     /* Hero */
     .hero {
       background:
-        linear-gradient(120deg, rgba(11, 18, 32, 0.86), rgba(29, 78, 216, 0.58)),
-        url('Gewerbegebiet.png') center/cover;
-      color: var(--white);
-      padding: 95px 0 85px;
+        linear-gradient(120deg, rgba(11,18,32,0.86), rgba(29,78,216,0.58)),
+        url('Reinigung_PV-Anlage.jpg') center/cover;
+      color: #fff;
+      padding: 88px 0 76px;
       text-align: center;
     }
 
@@ -159,24 +167,23 @@
       display: inline-block;
       padding: 8px 14px;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.14);
       font-size: 13px;
       margin-bottom: 16px;
     }
 
     h1 {
-      margin: 0 auto 16px;
+      margin: 0 0 16px;
       font-size: clamp(34px, 5vw, 58px);
       line-height: 1.05;
-      max-width: 920px;
     }
 
     .hero p {
       font-size: 18px;
-      color: #e2e8f0;
-      max-width: 780px;
+      color: #dbeafe;
       margin: 0 auto 24px;
+      max-width: 760px;
     }
 
     .actions {
@@ -205,34 +212,33 @@
 
     .btn-primary {
       background: var(--green);
-      color: var(--white);
+      color: #fff;
     }
 
     .btn-secondary {
-      background: rgba(255, 255, 255, 0.12);
-      color: var(--white);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.2);
     }
 
     /* Sections */
     .section {
-      padding: 78px 0;
+      padding: 74px 0;
     }
 
     .section-alt {
-      background: rgba(255, 255, 255, 0.72);
+      background: rgba(255,255,255,0.72);
     }
 
     .headline {
-      max-width: 780px;
+      max-width: 820px;
       margin-bottom: 24px;
     }
 
     .headline h2 {
-    margin: 0 auto 16px;
-      font-size: clamp(34px, 5vw, 58px);
-      line-height: 1.05;
-      max-width: 920px;
+      margin: 0 0 12px;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.1;
     }
 
     .headline p {
@@ -243,7 +249,7 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 22px;
     }
 
@@ -257,8 +263,8 @@
     .card {
       background: var(--white);
       border-radius: var(--radius);
-      padding: 28px;
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+      padding: 26px;
+      box-shadow: var(--shadow);
       border: 1px solid var(--border);
       height: 100%;
       transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -266,19 +272,17 @@
 
     .card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.14);
+      box-shadow: 0 24px 60px rgba(15,23,42,0.14);
     }
 
     .card h3 {
-     margin: 0 auto 16px;
-      font-size: clamp(34px, 5vw, 58px);
-      line-height: 1.05;
-      max-width: 920px;
+      margin-top: 0;
+      font-size: 24px;
     }
 
     .card p {
-      margin: 0 0 12px;
       color: var(--muted);
+      margin: 0 0 12px;
     }
 
     .card ul {
@@ -339,7 +343,19 @@
       height: 96px;
       object-fit: cover;
       border-radius: 16px;
-      border: 3px solid rgba(255, 255, 255, 0.25);
+      border: 3px solid rgba(255,255,255,0.25);
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 12px;
+      border: 1px solid #cbd5e1;
+      font: inherit;
+      background: #ffffff;
+      color: #0f172a;
     }
 
     footer {
@@ -364,29 +380,27 @@
       }
 
       .nav-inner {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    gap: 0;
-    padding: 8px 0;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 0;
+        padding: 8px 0;
       }
 
-    .brand {
-  grid-column: 2;
-  justify-self: center;
-  justify-content: center;
-  width: auto;
-  pointer-events: none;
-  cursor: default;
-}
+      .brand {
+        justify-content: flex-start;
+        width: auto;
+        pointer-events: none;
+        cursor: default;
+      }
 
       .brand img {
-        height: 130px;
+        height: 64px;
         margin: 0;
       }
 
       .menu-toggle {
-        display: block;
+        display: flex;
         justify-self: end;
       }
 
@@ -555,41 +569,40 @@
     </div>
   </section>
 
- <section class="section section-alt">
-  <div class="container split">
-    <div class="highlight">
-      <h2>Technische Sichtprüfung & Dokumentation</h2>
-      <p>
-        Sichtprüfungen und Dokumentationen helfen dabei, den Zustand der Anlage nachvollziehbar zu
-        bewerten und Maßnahmen besser zu planen.
-      </p>
-      <ul>
-        <li>Dokumentation mit 4K-Drohnenaufnahmen möglich</li>
-        <li>Erkennung von Verschmutzungen und Auffälligkeiten</li>
-        <li>Saubere Grundlage für weitere Entscheidungen</li>
-      </ul>
-    </div>
+  <section class="section section-alt">
+    <div class="container split">
+      <div class="highlight">
+        <h2>Technische Sichtprüfung & Dokumentation</h2>
+        <p>
+          Sichtprüfungen und Dokumentationen helfen dabei, den Zustand der Anlage nachvollziehbar zu
+          bewerten und Maßnahmen besser zu planen.
+        </p>
+        <ul>
+          <li>Dokumentation mit 4K-Drohnenaufnahmen möglich</li>
+          <li>Erkennung von Verschmutzungen und Auffälligkeiten</li>
+          <li>Saubere Grundlage für weitere Entscheidungen</li>
+        </ul>
+      </div>
 
-    <div class="card">
-      <img src="PV Vorher-Nachher.jfif" alt="PV Asset Management" class="service-image">
-      <h3>Warum regelmäßiger PV-Service sinnvoll ist</h3>
-      <p>
-        Ein sauberer, dokumentierter und technisch begleiteter Anlagenzustand unterstützt die
-        Übersichtlichkeit für Betreiber und hilft, Reinigung, Wartung oder Beratung fundierter zu
-        planen.
-      </p>
-      <ul>
-        <li>Mehr Übersicht über den Anlagenzustand</li>
-        <li>Saubere Dokumentation von Entwicklungen</li>
-        <li>Bessere Entscheidungsgrundlage für den Weiterbetrieb</li>
-      </ul>
+      <div class="card">
+        <img src="PV Vorher-Nachher.jfif" alt="Vorher-Nachher Photovoltaik" class="service-image">
+        <h3>Warum regelmäßiger PV-Service sinnvoll ist</h3>
+        <p>
+          Ein sauberer, dokumentierter und technisch begleiteter Anlagenzustand unterstützt die
+          Übersichtlichkeit für Betreiber und hilft, Reinigung, Wartung oder Beratung fundierter zu
+          planen.
+        </p>
+        <ul>
+          <li>Mehr Übersicht über den Anlagenzustand</li>
+          <li>Saubere Dokumentation von Entwicklungen</li>
+          <li>Bessere Entscheidungsgrundlage für den Weiterbetrieb</li>
+        </ul>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <section id="kontaktformular" class="section">
     <div class="container split">
-
       <div class="contact-box">
         <div style="display:flex; gap:20px; align-items:center; margin-bottom:20px; flex-wrap:wrap;">
           <img src="Leon Weinrich.JPG" alt="Leon Weinrich" class="profile-image">
@@ -625,11 +638,11 @@
 
         <form action="mailto:weinrichobjektservice@gmail.com" method="post" enctype="text/plain">
           <div style="display:grid; gap:14px;">
-            <input type="text" name="Name" placeholder="Name" style="padding:14px 16px; border-radius:14px; border:1px solid #cbd5e1; font:inherit;" required>
-            <input type="tel" name="Telefon" placeholder="Telefon" style="padding:14px 16px; border-radius:14px; border:1px solid #cbd5e1; font:inherit;">
-            <input type="email" name="E-Mail" placeholder="E-Mail" style="padding:14px 16px; border-radius:14px; border:1px solid #cbd5e1; font:inherit;" required>
+            <input type="text" name="Name" placeholder="Name" required>
+            <input type="tel" name="Telefon" placeholder="Telefon">
+            <input type="email" name="E-Mail" placeholder="E-Mail" required>
 
-            <select name="Leistung" style="padding:14px 16px; border-radius:14px; border:1px solid #cbd5e1; font:inherit; background:#fff;">
+            <select name="Leistung">
               <option>PV-Asset-Management</option>
               <option>Photovoltaik-Reinigung</option>
               <option>Technische Sichtprüfung</option>
@@ -640,15 +653,14 @@
               <option>Dachreinigung</option>
             </select>
 
-            <textarea name="Nachricht" rows="6" placeholder="Beschreiben Sie kurz Ihr Anliegen" style="padding:14px 16px; border-radius:14px; border:1px solid #cbd5e1; font:inherit;"></textarea>
+            <textarea name="Nachricht" rows="6" placeholder="Beschreiben Sie kurz Ihr Anliegen"></textarea>
 
-            <button type="submit" style="display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 20px;border-radius:14px;font-weight:700;background:#16a34a;color:#fff;border:none;cursor:pointer;">
+            <button type="submit">
               Anfrage senden
             </button>
           </div>
         </form>
       </div>
-
     </div>
   </section>
 
