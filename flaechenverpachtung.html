@@ -8,15 +8,15 @@
 
   <style>
     :root {
+      --navy: #0b1220;
       --blue: #1d4ed8;
-      --navy: #0f172a;
-      --muted: #475569;
-      --white: #ffffff;
-      --border: rgba(15,23,42,0.08);
-      --shadow: 0 20px 60px rgba(15,23,42,0.10);
-      --radius: 24px;
       --green: #16a34a;
       --ink: #0f172a;
+      --muted: #475569;
+      --white: #ffffff;
+      --border: rgba(15, 23, 42, 0.08);
+      --shadow: 0 20px 60px rgba(15, 23, 42, 0.10);
+      --radius: 24px;
     }
 
     * {
@@ -32,8 +32,8 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      color: var(--navy);
-      background: linear-gradient(180deg, #f8fbff 0%, #edf4fb 100%);
+      color: var(--ink);
+      background: linear-gradient(180deg, #f8fbff 0%, #eef5fb 100%);
       line-height: 1.65;
     }
 
@@ -134,32 +134,24 @@
 
     .menu-toggle {
       display: none;
-      width: 46px;
-      min-width: 46px;
-      max-width: 46px;
-      height: 46px;
-      min-height: 46px;
-      max-height: 46px;
-      padding: 0;
       border: 1px solid rgba(15, 23, 42, 0.12);
       background: #ffffff;
       color: #0f172a;
-      border-radius: 10px;
-      font-size: 20px;
-      line-height: 1;
-      box-sizing: border-box;
-      align-items: center;
-      justify-content: center;
+      border-radius: 12px;
+      padding: 8px 12px;
+      font-size: 22px;
+      width: 46px;
+      height: 46px;
       cursor: pointer;
     }
 
     /* Hero */
     .hero {
       background:
-        linear-gradient(120deg, rgba(11,18,32,0.86), rgba(29,78,216,0.58)),
+        linear-gradient(120deg, rgba(11, 18, 32, 0.86), rgba(29, 78, 216, 0.58)),
         url('Gewerbegebiet.png') center/cover;
-      color: #fff;
-      padding: 88px 0 76px;
+      color: var(--white);
+      padding: 95px 0 85px;
       text-align: center;
     }
 
@@ -167,23 +159,24 @@
       display: inline-block;
       padding: 8px 14px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.14);
       font-size: 13px;
       margin-bottom: 16px;
     }
 
     h1 {
-      margin: 0 0 16px;
+      margin: 0 auto 16px;
       font-size: clamp(34px, 5vw, 58px);
       line-height: 1.05;
+      max-width: 920px;
     }
 
     .hero p {
       font-size: 18px;
-      color: #dbeafe;
+      color: #e2e8f0;
+      max-width: 780px;
       margin: 0 auto 24px;
-      max-width: 760px;
     }
 
     .actions {
@@ -212,26 +205,26 @@
 
     .btn-primary {
       background: var(--green);
-      color: #fff;
+      color: var(--white);
     }
 
     .btn-secondary {
-      background: rgba(255,255,255,0.12);
-      color: #fff;
-      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(255, 255, 255, 0.12);
+      color: var(--white);
+      border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     /* Sections */
     .section {
-      padding: 74px 0;
+      padding: 78px 0;
     }
 
     .section-alt {
-      background: rgba(255,255,255,0.72);
+      background: rgba(255, 255, 255, 0.72);
     }
 
     .headline {
-      max-width: 820px;
+      max-width: 780px;
       margin-bottom: 24px;
     }
 
@@ -263,8 +256,8 @@
     .card {
       background: var(--white);
       border-radius: var(--radius);
-      padding: 26px;
-      box-shadow: var(--shadow);
+      padding: 28px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
       border: 1px solid var(--border);
       height: 100%;
       transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -272,17 +265,17 @@
 
     .card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 24px 60px rgba(15,23,42,0.14);
+      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.14);
     }
 
     .card h3 {
-      margin-top: 0;
+      margin: 0 0 12px;
       font-size: 24px;
     }
 
     .card p {
-      color: var(--muted);
       margin: 0 0 12px;
+      color: var(--muted);
     }
 
     .card ul {
@@ -326,19 +319,7 @@
       height: 96px;
       object-fit: cover;
       border-radius: 16px;
-      border: 3px solid rgba(255,255,255,0.25);
-    }
-
-    input,
-    select,
-    textarea {
-      width: 100%;
-      padding: 14px 16px;
-      border-radius: 12px;
-      border: 1px solid #cbd5e1;
-      font: inherit;
-      background: #ffffff;
-      color: #0f172a;
+      border: 3px solid rgba(255, 255, 255, 0.25);
     }
 
     footer {
@@ -358,24 +339,26 @@
 
     /* Mobile */
     @media (max-width: 720px) {
-      .container {
-        width: calc(100% - 20px);
-      }
+  .container {
+    width: calc(100% - 20px);
+  }
 
-      .nav-inner {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        align-items: center;
-        gap: 0;
-        padding: 8px 0;
-      }
+  .nav-inner {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 0;
+    padding: 8px 0;
+  }
 
-      .brand {
-        justify-content: flex-start;
-        width: auto;
-        pointer-events: none;
-        cursor: default;
-      }
+ .brand {
+  grid-column: 2;
+  justify-self: center;
+  justify-content: center;
+  width: auto;
+  pointer-events: none;
+  cursor: default;
+}
 
       .brand img {
         height: 130px;
@@ -383,7 +366,7 @@
       }
 
       .menu-toggle {
-        display: flex;
+        display: block;
         justify-self: end;
       }
 
@@ -495,7 +478,7 @@
       <p>
         Sie möchten prüfen, ob sich eine Dach- oder Freifläche für ein Photovoltaikprojekt eignet?
         Weinrich Objektservice unterstützt Eigentümer bei der Ersteinschätzung, strukturierten
-        Vorbereitung und Begleitung im Austausch mit Projektinvestoren.
+        Vorbereitung und Begleitung im Austausch mit Projektentwicklern.
       </p>
       <div class="actions">
         <a class="btn btn-primary" href="#kontaktformular">Fläche unverbindlich anfragen</a>
@@ -535,7 +518,7 @@
         </article>
 
         <article class="card">
-          <h3>Zusätzliche Einnahmen ohne Eigeninvestition</h3>
+          <h3>Eigentümer ohne Eigeninvestition</h3>
           <p>
             Gerade wenn kein eigenes Investment gewünscht ist, kann die strukturierte Prüfung einer
             Verpachtungslösung sinnvoll sein. Ziel ist eine realistische Einordnung statt vorschneller
@@ -571,14 +554,14 @@
           <ul>
             <li>Strukturierte Aufbereitung der Flächendaten</li>
             <li>Zusammenstellung relevanter Eckdaten</li>
-            <li>Maßgeschneidertes Angebot von Investoren</li>
+            <li>Unterstützung bei der ersten Ansprache</li>
           </ul>
         </article>
 
         <article class="card">
           <h3>Begleitung im Austausch</h3>
           <ul>
-            <li>Unterstützung bei Rückfragen von Projektinvestoren</li>
+            <li>Unterstützung bei Rückfragen von Projektentwicklern</li>
             <li>Einordnung eingehender Angebote</li>
             <li>Begleitende Kommunikation aus Eigentümersicht</li>
           </ul>
@@ -600,7 +583,7 @@
 
         <p>
           Gerade bei Freiflächenprojekten gelten zusätzliche Vorgaben und Prüfungen. Deshalb ist eine saubere
-          Ersteinschätzung besonders wichtig, bevor Gespräche mit Projektinvestoren vertieft werden.
+          Ersteinschätzung besonders wichtig, bevor Gespräche mit Projektentwicklern vertieft werden.
         </p>
 
         <p>
@@ -635,7 +618,7 @@
           <p style="margin-top:8px;">
             Sie möchten wissen, ob Ihre Fläche grundsätzlich geeignet ist?
             Wir unterstützen Sie bei einer ersten strukturierten Einschätzung
-            und der Vorbereitung für Gespräche mit Projektinvestoren.
+            und der Vorbereitung für Gespräche mit Projektentwicklern.
           </p>
         </div>
       </div>
@@ -679,24 +662,23 @@
 
         <form action="mailto:weinrichobjektservice@gmail.com" method="post" enctype="text/plain">
           <div style="display:grid; gap:14px;">
-            <input type="text" name="Name" placeholder="Name" required>
-            <input type="tel" name="Telefon" placeholder="Telefon">
-            <input type="email" name="E-Mail" placeholder="E-Mail" required>
+            <input type="text" name="Name" placeholder="Name" style="padding:14px 16px; border-radius:14px; border:1px solid #cbd5e1; font:inherit;" required>
+            <input type="tel" name="Telefon" placeholder="Telefon" style="padding:14px 16px; border-radius:14px; border:1px solid #cbd5e1; font:inherit;">
+            <input type="email" name="E-Mail" placeholder="E-Mail" style="padding:14px 16px; border-radius:14px; border:1px solid #cbd5e1; font:inherit;" required>
 
-            <select name="Leistung">
+            <select name="Leistung" style="padding:14px 16px; border-radius:14px; border:1px solid #cbd5e1; font:inherit; background:#fff;">
               <option>Flächenverpachtung / PV-Projektprüfung</option>
               <option>EEG-Beratung</option>
-              <option>PV-Asset-Management</option>
               <option>Photovoltaik-Reinigung</option>
-              <option>Technische Sichtprüfung</option>
+              <option>PV-Asset-Management</option>
               <option>Fassadenreinigung</option>
               <option>Steinreinigung</option>
               <option>Dachreinigung</option>
             </select>
 
-            <textarea name="Nachricht" rows="6" placeholder="Beschreiben Sie kurz Ihre Fläche oder Ihr Anliegen"></textarea>
+            <textarea name="Nachricht" rows="6" placeholder="Beschreiben Sie kurz Ihre Fläche oder Ihr Anliegen" style="padding:14px 16px; border-radius:14px; border:1px solid #cbd5e1; font:inherit;"></textarea>
 
-            <button type="submit">
+            <button type="submit" style="display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 20px;border-radius:14px;font-weight:700;background:#16a34a;color:#fff;border:none;cursor:pointer;">
               Anfrage senden
             </button>
           </div>
