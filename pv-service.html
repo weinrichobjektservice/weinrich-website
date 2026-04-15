@@ -638,24 +638,23 @@
 
         <form action="mailto:weinrichobjektservice@gmail.com" method="post" enctype="text/plain">
           <div style="display:grid; gap:14px;">
-            <input type="text" name="Name" placeholder="Name" required>
-            <input type="tel" name="Telefon" placeholder="Telefon">
-            <input type="email" name="E-Mail" placeholder="E-Mail" required>
+            <input type="text" name="Name" placeholder="Name" style="padding:14px 16px; border-radius:14px; border:1px solid #cbd5e1; font:inherit;" required>
+            <input type="tel" name="Telefon" placeholder="Telefon" style="padding:14px 16px; border-radius:14px; border:1px solid #cbd5e1; font:inherit;">
+            <input type="email" name="E-Mail" placeholder="E-Mail" style="padding:14px 16px; border-radius:14px; border:1px solid #cbd5e1; font:inherit;" required>
 
-            <select name="Leistung">
+            <select name="Leistung" style="padding:14px 16px; border-radius:14px; border:1px solid #cbd5e1; font:inherit; background:#fff;">
               <option>PV-Asset-Management</option>
-              <option>Photovoltaik-Reinigung</option>
-              <option>Technische Sichtprüfung</option>
-              <option>EEG-Beratung</option>
               <option>Flächenverpachtung / PV-Projektprüfung</option>
+              <option>EEG-Beratung</option>
+              <option>Photovoltaik-Reinigung</option>
               <option>Fassadenreinigung</option>
               <option>Steinreinigung</option>
               <option>Dachreinigung</option>
             </select>
 
-            <textarea name="Nachricht" rows="6" placeholder="Beschreiben Sie kurz Ihr Anliegen"></textarea>
+            <textarea name="Nachricht" rows="6" placeholder="Beschreiben Sie kurz Ihr Anliegen" style="padding:14px 16px; border-radius:14px; border:1px solid #cbd5e1; font:inherit;"></textarea>
 
-            <button type="submit">
+            <button type="submit" style="display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 20px;border-radius:14px;font-weight:700;background:#16a34a;color:#fff;border:none;cursor:pointer;">
               Anfrage senden
             </button>
           </div>
@@ -663,6 +662,7 @@
       </div>
     </div>
   </section>
+
 
   <footer>
     <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-bottom:10px;">
