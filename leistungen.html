@@ -4,29 +4,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Leistungen | Weinrich Objektservice</title>
-  <meta name="description" content="Leistungen von Weinrich Objektservice: PV-Asset-Management, EEG-Beratung, Photovoltaik-Reinigung, Fassadenreinigung, Steinreinigung und Dachreinigung." />
+  <meta name="description" content="Unsere Leistungen rund um PV-Asset-Management, EEG-Beratung, Flächenverpachtung, Photovoltaik-Reinigung sowie Fassaden-, Stein- und Dachreinigung." />
+
   <style>
     :root {
-      --navy: #0b1220;
       --blue: #1d4ed8;
-      --green: #16a34a;
-      --ink: #0f172a;
+      --navy: #0f172a;
       --muted: #475569;
       --white: #ffffff;
-      --border: rgba(15, 23, 42, 0.08);
-      --shadow: 0 20px 60px rgba(15, 23, 42, 0.10);
+      --border: rgba(15,23,42,0.08);
+      --shadow: 0 20px 60px rgba(15,23,42,0.10);
       --radius: 24px;
+      --green: #16a34a;
+      --ink: #0f172a;
     }
 
     * {
       box-sizing: border-box;
     }
 
+    html,
     body {
       margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    body {
       font-family: Arial, Helvetica, sans-serif;
-      color: var(--ink);
-      background: linear-gradient(180deg, #f8fbff 0%, #eef5fb 100%);
+      color: var(--navy);
+      background: linear-gradient(180deg, #f8fbff 0%, #edf4fb 100%);
       line-height: 1.65;
     }
 
@@ -40,66 +47,64 @@
     }
 
     .nav {
-      position: relative;
+      position: sticky;
       top: 0;
       z-index: 50;
-      backdrop-filter: blur(16px);
-      background: rgba(255, 255, 255, 0.88);
-      color: var(--ink);
-      border-bottom: 1px solid var(--border);
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      backdrop-filter: blur(14px);
+      background: rgba(255, 255, 255, 0.92);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+      transition: transform 0.28s ease, background 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .nav.nav-hidden {
+      transform: translateY(-100%);
     }
 
     .nav-inner {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
-      padding: 14px 0;
-      gap: 20px;
+      gap: 2px;
+      padding: 2px 0;
     }
 
     .brand {
       display: flex;
+      justify-content: center;
       align-items: center;
-      gap: 12px;
-      font-weight: 700;
-      letter-spacing: 0.2px;
+      width: 100%;
       text-decoration: none;
     }
 
     .brand img {
-      height: 72px;
+      height: 225px;
       width: auto;
       display: block;
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.05;
-    }
-
-    .brand-text small {
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 600;
+      margin: 0 auto;
+      transition: height 0.25s ease;
     }
 
     .nav-links {
       display: flex;
-      gap: 12px;
+      gap: 10px;
       flex-wrap: wrap;
-      font-size: 14px;
+      justify-content: center;
+      width: 100%;
+      font-size: 13px;
       align-items: center;
+      margin-top: -4px;
+      padding-bottom: 4px;
     }
 
     .nav-links a {
       text-decoration: none;
-      padding: 8px 14px;
+      padding: 4px 10px;
       border-radius: 999px;
       transition: all 0.2s ease;
       color: var(--muted);
       font-weight: 600;
+      font-size: 13px;
     }
 
     .nav-links a:hover {
@@ -110,11 +115,11 @@
     .nav-cta {
       background: #ffffff;
       color: var(--blue) !important;
-      padding: 10px 18px !important;
+      padding: 6px 12px !important;
       border-radius: 999px;
       font-weight: 700;
-      letter-spacing: 0.2px;
-      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
+      letter-spacing: 0.1px;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.10);
       border: 2px solid var(--blue);
     }
 
@@ -126,35 +131,104 @@
       transform: translateY(-1px);
     }
 
+    .menu-toggle {
+      display: none;
+      width: 46px;
+      min-width: 46px;
+      max-width: 46px;
+      height: 46px;
+      min-height: 46px;
+      max-height: 46px;
+      padding: 0;
+      border: 1px solid rgba(15, 23, 42, 0.12);
+      background: #ffffff;
+      color: #0f172a;
+      border-radius: 10px;
+      font-size: 20px;
+      line-height: 1;
+      box-sizing: border-box;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
     .hero {
       background:
-        linear-gradient(120deg, rgba(11, 18, 32, 0.86), rgba(29, 78, 216, 0.58)),
+        linear-gradient(120deg, rgba(11,18,32,0.86), rgba(29,78,216,0.58)),
         url('Reinigung_PV-Anlage.jpg') center/cover;
-      color: var(--white);
-      padding: 90px 0 80px;
+      color: #fff;
+      padding: 88px 0 76px;
       text-align: center;
     }
 
-    .hero h1 {
-      margin: 0 auto 16px;
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.14);
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0 0 16px;
       font-size: clamp(34px, 5vw, 58px);
       line-height: 1.05;
-      max-width: 920px;
     }
 
     .hero p {
       font-size: 18px;
-      color: #e2e8f0;
+      color: #dbeafe;
+      margin: 0 auto 24px;
       max-width: 760px;
-      margin: 0 auto;
+    }
+
+    .actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 20px;
+      border-radius: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      opacity: 0.96;
+    }
+
+    .btn-primary {
+      background: var(--green);
+      color: #fff;
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.2);
     }
 
     .section {
-      padding: 78px 0;
+      padding: 74px 0;
+    }
+
+    .section-alt {
+      background: rgba(255,255,255,0.72);
     }
 
     .headline {
-      max-width: 760px;
+      max-width: 820px;
       margin-bottom: 24px;
     }
 
@@ -176,11 +250,18 @@
       gap: 22px;
     }
 
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
     .card {
       background: var(--white);
       border-radius: var(--radius);
-      padding: 28px;
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+      padding: 26px;
+      box-shadow: var(--shadow);
       border: 1px solid var(--border);
       height: 100%;
       transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -188,17 +269,22 @@
 
     .card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.14);
+      box-shadow: 0 24px 60px rgba(15,23,42,0.14);
     }
 
     .card h3 {
-      margin: 0 0 12px;
+      margin-top: 0;
       font-size: 24px;
     }
 
     .card p {
-      margin: 0;
       color: var(--muted);
+      margin: 0 0 12px;
+    }
+
+    .card ul {
+      margin: 12px 0 0;
+      padding-left: 18px;
     }
 
     .service-image {
@@ -208,6 +294,58 @@
       border-radius: 18px;
       margin-bottom: 16px;
       border: 1px solid var(--border);
+      background: #fff;
+    }
+
+    .highlight {
+      background: linear-gradient(135deg, #eff6ff, #ecfeff);
+      border: 1px solid #bfdbfe;
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-box {
+      background: linear-gradient(135deg, #0b1220, #1e3a8a);
+      color: var(--white);
+      border-radius: 24px;
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-box p,
+    .contact-box li {
+      color: #dbeafe;
+    }
+
+    .contact-box a {
+      color: #ffffff;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .contact-box a:hover {
+      text-decoration: underline;
+    }
+
+    .profile-image {
+      width: 96px;
+      height: 96px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 3px solid rgba(255,255,255,0.25);
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 12px;
+      border: 1px solid #cbd5e1;
+      font: inherit;
+      background: #ffffff;
+      color: #0f172a;
     }
 
     footer {
@@ -223,19 +361,54 @@
       }
     }
 
+    @media (max-width: 820px) {
+      .split {
+        grid-template-columns: 1fr;
+      }
+    }
+
     @media (max-width: 720px) {
-      .nav-inner,
-      .nav-links {
-        flex-direction: column;
-        align-items: flex-start;
+      .container {
+        width: calc(100% - 20px);
+      }
+
+      .nav-inner {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 0;
+        padding: 8px 0;
+      }
+
+      .brand {
+        justify-content: flex-start;
+        width: auto;
+        pointer-events: none;
+        cursor: default;
       }
 
       .brand img {
-        height: 56px;
+        height: 130px;
+        margin: 0;
+      }
+
+      .menu-toggle {
+        display: flex;
+        justify-self: end;
       }
 
       .nav-links {
+        display: none;
+        grid-column: 1 / -1;
+        margin-top: 8px;
+        padding: 0 0 8px 0;
         width: 100%;
+      }
+
+      .nav-links.menu-open {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
         gap: 8px;
       }
 
@@ -243,42 +416,58 @@
         width: 100%;
         text-align: center;
         padding: 10px 14px;
+        font-size: 14px;
       }
 
-      .grid {
-        grid-template-columns: 1fr;
+      .grid,
+      .split {
+        grid-template-columns: 1fr !important;
       }
 
       .hero {
-        padding: 70px 0 55px;
+        padding: 56px 0 44px;
       }
 
-      .hero h1 {
+      h1 {
         font-size: 34px;
-        line-height: 1.15;
+        line-height: 1.12;
       }
 
       .hero p {
         font-size: 16px;
         max-width: 100%;
-        padding: 0 6px;
+        padding: 0 4px;
+      }
+
+      .actions {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 320px;
       }
 
       .section {
-        padding: 56px 0;
+        padding: 48px 0;
       }
 
-      .container {
-        width: calc(100% - 20px);
-      }
-
-      .card {
+      .card,
+      .highlight,
+      .contact-box {
         padding: 20px;
         border-radius: 18px;
+        width: 100%;
       }
 
       .service-image {
-        height: 170px;
+        height: 180px;
+      }
+
+      .profile-image {
+        width: 110px;
+        height: 110px;
       }
 
       .headline h2 {
@@ -290,73 +479,111 @@
         font-size: 16px;
       }
     }
-
-    @media (min-width: 900px) {
-      .nav {
-        position: sticky;
-        top: 0;
-      }
-    }
   </style>
 </head>
 <body>
+
   <nav class="nav">
     <div class="container nav-inner">
       <a href="index.html" class="brand">
         <img src="Weinrich Objektservice.png" alt="Weinrich Objektservice Logo">
-        <div class="brand-text">
-          <span>Weinrich Objektservice</span>
-          <small>PV-Asset-Management & Reinigung</small>
-        </div>
       </a>
+
+      <button class="menu-toggle" aria-label="Menü öffnen" type="button">☰</button>
+
       <div class="nav-links">
-  <a href="leistungen.html">Leistungen</a>
-  <a href="pv-service.html">PV-Service</a>
-  <a href="flaechenverpachtung.html">Flächenverpachtung</a>
-  <a href="eeg-beratung.html">EEG-Beratung</a>
-  <a href="kontakt.html" class="nav-cta">Kontakt</a>
-</div>
+        <a href="index.html">Startseite</a>
+        <a href="leistungen.html">Leistungen</a>
+        <a href="pv-service.html">PV-Service</a>
+        <a href="flaechenverpachtung.html">Flächenverpachtung</a>
+        <a href="eeg-beratung.html">EEG-Beratung</a>
+        <a href="kontakt.html" class="nav-cta">Kontakt</a>
+      </div>
     </div>
   </nav>
 
   <header class="hero">
     <div class="container">
+      <div class="eyebrow">PV-Asset-Management · EEG-Beratung · Reinigung · Flächenverpachtung</div>
       <h1>Unsere Leistungen</h1>
       <p>
-        Weinrich Objektservice verbindet technische Betreuung, fundierte EEG-Beratung und
-        professionelle Reinigungsleistungen zu einem ganzheitlichen Angebot rund um Photovoltaik,
-        Gebäude und Außenflächen.
+        Weinrich Objektservice verbindet technische Betreuung, fundierte EEG-Beratung,
+        Flächenverpachtung und werterhaltende Reinigungsleistungen zu einem ganzheitlichen
+        Angebot rund um Photovoltaik, Gebäude und Außenflächen.
       </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#leistungen">Leistungen ansehen</a>
+        <a class="btn btn-secondary" href="kontakt.html">Kontakt aufnehmen</a>
+      </div>
     </div>
   </header>
 
-  <section class="section">
+  <section id="leistungen" class="section">
     <div class="container">
       <div class="headline">
         <h2>Leistungsübersicht</h2>
         <p>
           Unsere Schwerpunkte liegen auf technischer Begleitung, wirtschaftlicher Beratung und
-          werterhaltenden Reinigungsleistungen für Photovoltaikanlagen und Immobilien.
+          werterhaltenden Dienstleistungen für Photovoltaikanlagen, Immobilien und geeignete Flächen.
         </p>
       </div>
 
       <div class="grid">
         <article class="card">
-          <img src="PV Vorher-Nachher.jfif" alt="PV Asset Management" class="service-image">
+          <img src="PV Vorher-Nachher.jfif" alt="PV-Asset-Management" class="service-image">
           <h3>PV-Asset-Management</h3>
           <p>
             Ganzheitliche technische und wirtschaftliche Betreuung von Photovoltaikanlagen mit Fokus
             auf Leistung, Anlagenzustand und nachhaltigen Betrieb.
           </p>
+          <h4 style="margin:10px 0 6px; font-size:16px;">PV-Asset-Management für Betreiber</h4>
+          <ul>
+            <li>Dokumentation und Zustandsprüfung</li>
+            <li>Empfehlungen für Reinigung und Wartung</li>
+            <li>Strategische Begleitung nach EEG-Ende</li>
+          </ul>
         </article>
 
         <article class="card">
-          <img src="Reinigung_PV-Anlage.jpg" alt="Photovoltaik Reinigung" class="service-image">
+          <img src="Reinigung_PV-Anlage.jpg" alt="Photovoltaik-Reinigung" class="service-image">
           <h3>Photovoltaik-Reinigung</h3>
           <p>
-            Professionelle Reinigung von Modulen und Anlagenflächen für einen gepflegten Zustand und
-            eine saubere Dokumentation.
+            Professionelle Reinigung von Modulen und Anlagenflächen für einen gepflegten Zustand,
+            saubere Sichtprüfung und nachvollziehbare Ergebnisse.
           </p>
+          <ul>
+            <li>Reinigung von PV-Modulen</li>
+            <li>Vorher-/Nachher-Dokumentation</li>
+            <li>Sauberer Anlagenzustand</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <img src="EEG-Beratung.png" alt="EEG-Beratung Photovoltaik" class="service-image">
+          <h3>EEG-Beratung</h3>
+          <p>
+            Unterstützung bei ausgelaufener oder bald endender EEG-Förderung sowie beim sinnvollen
+            Weiterbetrieb Ihrer Photovoltaikanlage.
+          </p>
+          <ul>
+            <li>Einordnung nach EEG-Ende</li>
+            <li>Beratung zum Weiterbetrieb</li>
+            <li>Technische und wirtschaftliche Orientierung</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <img src="Gewerbegebiet.png" alt="Flächenverpachtung Photovoltaik" class="service-image">
+          <h3>Flächenverpachtung</h3>
+          <p>
+            Unterstützung bei der Ersteinschätzung und Vorbereitung von Dach- oder Freiflächen für
+            Photovoltaikprojekte.
+          </p>
+          <ul>
+            <li>Einordnung von Dach- und Freiflächen</li>
+            <li>Vorbereitung für Gespräche mit Projektinvestoren</li>
+            <li>Begleitung aus Sicht des Eigentümers</li>
+          </ul>
         </article>
 
         <article class="card">
@@ -366,6 +593,11 @@
             Werterhaltende Außenreinigung für gepflegte und optisch aufgewertete Fassadenflächen an
             Wohn- und Gewerbeobjekten.
           </p>
+          <ul>
+            <li>Optische Aufwertung</li>
+            <li>Werterhalt der Immobilie</li>
+            <li>Schonende Reinigung</li>
+          </ul>
         </article>
 
         <article class="card">
@@ -375,36 +607,167 @@
             Reinigung von Einfahrten, Wegen, Hofflächen und sonstigen Steinoberflächen mit Fokus auf
             Sauberkeit und Werterhalt.
           </p>
+          <ul>
+            <li>Wiederherstellung eines gepflegten Erscheinungsbilds</li>
+            <li>Reinigung von Wegen und Hofflächen</li>
+            <li>Werterhaltender Außenbereich</li>
+          </ul>
         </article>
 
         <article class="card">
-  <img src="EEG-Beratung.png" alt="EEG Beratung Photovoltaik" class="service-image">
-  <h3>EEG-Beratung</h3>
-  <p>
-    Unterstützung bei ausgelaufener oder bald endender EEG-Förderung sowie beim sinnvollen
-    Weiterbetrieb Ihrer Photovoltaikanlage.
-  </p>
-</article>
+          <img src="Dachreinigung.png" alt="Dachreinigung" class="service-image">
+          <h3>Dachreinigung</h3>
+          <p>
+            Reinigung und optische Aufwertung von Dachflächen mit Blick auf Pflege, Werterhalt und
+            ein gepflegtes Gesamtbild der Immobilie.
+          </p>
+          <ul>
+            <li>Pflege von Dachflächen</li>
+            <li>Optische Aufwertung</li>
+            <li>Ganzheitlicher Außenauftritt</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
 
-        <article class="card">
-  <img src="Dachreinigung.png" alt="Dachreinigung Gebäude" class="service-image">
-  <h3>Dachreinigung</h3>
-  <p>
-    Reinigung und optische Aufwertung von Dachflächen mit Blick auf Pflege, Werterhalt und
-    ein gepflegtes Gesamtbild der Immobilie.
-  </p>
-</article>
-        
+  <section class="section section-alt">
+    <div class="container split">
+      <div class="highlight">
+        <h2>Warum Eigentümer sich für eine strukturierte Begleitung entscheiden</h2>
+        <p>
+          Gerade bei technischen Anlagen und werterhaltenden Dienstleistungen zählt nicht nur die
+          Durchführung, sondern auch eine klare Einordnung. Deshalb setzen wir auf nachvollziehbare
+          Einschätzungen, saubere Dokumentation und verständliche Kommunikation.
+        </p>
+        <ul>
+          <li>Klare Orientierung statt unübersichtlicher Einzelmaßnahmen</li>
+          <li>Technische und wirtschaftliche Einordnung aus einer Hand</li>
+          <li>Persönlicher Ansprechpartner statt anonymer Vermittlung</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Für wen unsere Leistungen besonders interessant sind</h3>
+        <p>
+          Unser Angebot richtet sich besonders an Betreiber von Photovoltaikanlagen, Eigentümer von
+          Gewerbe- und Wohnimmobilien sowie an Personen, die eine Dach- oder Freifläche für
+          Photovoltaik prüfen möchten.
+        </p>
+        <ul>
+          <li>Betreiber älterer Photovoltaikanlagen</li>
+          <li>Eigentümer mit Reinigungs- oder Dokumentationsbedarf</li>
+          <li>Immobilienbesitzer mit Fokus auf Werterhalt</li>
+          <li>Eigentümer geeigneter Dach- und Freiflächen</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontaktformular" class="section">
+    <div class="container split">
+      <div class="contact-box">
+        <div style="display:flex; gap:20px; align-items:center; margin-bottom:20px; flex-wrap:wrap;">
+          <img src="Leon Weinrich.JPG" alt="Leon Weinrich" class="profile-image">
+          <div>
+            <h2 style="margin:0 0 6px 0;">Ihr Ansprechpartner</h2>
+            <strong>Leon Weinrich</strong><br>
+            PV-Asset-Management & Objektservice
+          </div>
+        </div>
+
+        <p>
+          Ich unterstütze Sie bei der technischen Bewertung, Reinigung, EEG-Beratung und
+          der Prüfung von Flächen für PV-Projekte.
+        </p>
+
+        <p>
+          <strong>Weinrich Objektservice</strong><br>
+          Leon Weinrich<br>
+          Sudetenstr. 2<br>
+          97199 Ochsenfurt
+        </p>
+
+        <p>
+          <strong>Telefon:</strong><br>
+          Mobil: <a href="tel:+4916090248569">0160 / 90248569</a><br>
+          Festnetz: <a href="tel:+4993130513743">0931 / 30513743</a><br>
+          E-Mail: <a href="mailto:weinrichobjektservice@gmail.com">weinrichobjektservice@gmail.com</a>
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Kontaktformular</h3>
+
+        <form action="mailto:weinrichobjektservice@gmail.com" method="post" enctype="text/plain">
+          <div style="display:grid; gap:14px;">
+            <input type="text" name="Name" placeholder="Name" required>
+            <input type="tel" name="Telefon" placeholder="Telefon">
+            <input type="email" name="E-Mail" placeholder="E-Mail" required>
+
+            <select name="Leistung">
+              <option>PV-Asset-Management</option>
+              <option>Photovoltaik-Reinigung</option>
+              <option>EEG-Beratung</option>
+              <option>Flächenverpachtung / PV-Projektprüfung</option>
+              <option>Fassadenreinigung</option>
+              <option>Steinreinigung</option>
+              <option>Dachreinigung</option>
+            </select>
+
+            <textarea name="Nachricht" rows="6" placeholder="Beschreiben Sie kurz Ihr Anliegen"></textarea>
+
+            <button type="submit">
+              Anfrage senden
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </section>
 
   <footer>
     <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-bottom:10px;">
+      <a href="index.html" style="text-decoration:none;">Zur Startseite</a>
       <a href="impressum.html" style="text-decoration:none;">Impressum</a>
       <a href="datenschutz.html" style="text-decoration:none;">Datenschutz</a>
     </div>
-    © Weinrich Objektservice · PV-Asset-Management · EEG-Beratung · Photovoltaik-Reinigung · Steinreinigung · Fassadenreinigung · Dachreinigung
+    © Weinrich Objektservice · PV-Asset-Management · EEG-Beratung · Photovoltaik-Reinigung · Flächenverpachtung · Fassadenreinigung · Steinreinigung · Dachreinigung
   </footer>
+
+  <script>
+    let lastScrollY = window.scrollY;
+    const nav = document.querySelector(".nav");
+
+    window.addEventListener("scroll", function () {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY <= 10) {
+        nav.classList.remove("nav-hidden");
+        lastScrollY = currentScrollY;
+        return;
+      }
+
+      if (currentScrollY > lastScrollY) {
+        nav.classList.add("nav-hidden");
+      } else {
+        nav.classList.remove("nav-hidden");
+      }
+
+      lastScrollY = currentScrollY;
+    });
+  </script>
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("menu-open");
+      });
+    }
+  </script>
+
 </body>
 </html>
