@@ -381,11 +381,13 @@
       }
 
       .brand {
-        justify-content: flex-start;
-        width: auto;
-        pointer-events: none;
-        cursor: default;
-      }
+  grid-column: 2;
+  justify-self: center;
+  justify-content: center;
+  width: auto;
+  pointer-events: none;
+  cursor: default;
+}
 
       .brand img {
         height: 130px;
@@ -393,10 +395,10 @@
       }
 
       .menu-toggle {
-        display: block;
-        justify-self: end;
-      }
-
+  display: flex !important;
+  grid-column: 3;
+  justify-self: end;
+}
       .nav-links {
         display: none;
         grid-column: 1 / -1;
