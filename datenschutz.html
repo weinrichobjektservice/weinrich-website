@@ -1,17 +1,168 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<title>Datenschutz</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datenschutz | Weinrich Objektservice</title>
+
+  <style>
+    :root {
+      --blue: #1d4ed8;
+      --navy: #0f172a;
+      --muted: #475569;
+      --white: #ffffff;
+      --border: rgba(15,23,42,0.08);
+      --shadow: 0 20px 60px rgba(15,23,42,0.10);
+      --radius: 24px;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #f8fbff 0%, #edf4fb 100%);
+      color: var(--navy);
+      line-height: 1.65;
+    }
+
+    .container {
+      width: min(900px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .hero {
+      background: linear-gradient(120deg, rgba(11,18,32,0.9), rgba(29,78,216,0.6));
+      color: #fff;
+      padding: 80px 0 60px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 42px;
+    }
+
+    .section {
+      padding: 60px 0;
+    }
+
+    .card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    h2 {
+      margin-top: 30px;
+      font-size: 22px;
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 16px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: #fff;
+    }
+
+    @media (max-width: 720px) {
+      h1 {
+        font-size: 30px;
+      }
+
+      .card {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
+<body>
 
-<body style="font-family:Arial; margin:40px;">
+  <header class="hero">
+    <div class="container">
+      <h1>Datenschutzerklärung</h1>
+    </div>
+  </header>
 
-<h1>Datenschutz</h1>
+  <section class="section">
+    <div class="container">
+      <div class="card">
 
-<p>Diese Website speichert keine personenbezogenen Daten.</p>
+        <h2>1. Verantwortlicher</h2>
+        <p>
+          Weinrich Objektservice<br>
+          Leon Weinrich<br>
+          Sudetenstr. 2<br>
+          97199 Ochsenfurt<br><br>
 
-<a href="index.html">Zurück</a>
+          Telefon: 0931 / 30513743<br>
+          Mobil: 0160 / 90248569<br>
+          E-Mail: weinrichobjektservice@gmail.com
+        </p>
+
+        <h2>2. Zugriffsdaten (Server-Logfiles)</h2>
+        <p>
+          Beim Besuch unserer Website werden automatisch Informationen erfasst,
+          die Ihr Browser an unseren Server übermittelt. Dies sind insbesondere:
+        </p>
+        <ul>
+          <li>IP-Adresse</li>
+          <li>Datum und Uhrzeit der Anfrage</li>
+          <li>Browsertyp und Browserversion</li>
+          <li>Betriebssystem</li>
+        </ul>
+
+        <p>
+          Diese Daten dienen ausschließlich der Sicherstellung eines störungsfreien Betriebs der Website.
+        </p>
+
+        <h2>3. Kontaktaufnahme</h2>
+        <p>
+          Wenn Sie uns per E-Mail oder über das Kontaktformular kontaktieren,
+          werden Ihre Angaben zur Bearbeitung der Anfrage gespeichert.
+        </p>
+
+        <p>
+          Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO.
+        </p>
+
+        <h2>4. Ihre Rechte</h2>
+        <p>
+          Sie haben das Recht auf:
+        </p>
+        <ul>
+          <li>Auskunft über Ihre gespeicherten Daten</li>
+          <li>Berichtigung unrichtiger Daten</li>
+          <li>Löschung Ihrer Daten</li>
+          <li>Einschränkung der Verarbeitung</li>
+          <li>Widerspruch gegen die Verarbeitung</li>
+        </ul>
+
+        <h2>5. SSL-Verschlüsselung</h2>
+        <p>
+          Diese Seite nutzt aus Sicherheitsgründen eine SSL-Verschlüsselung.
+        </p>
+
+        <a href="index.html" class="back">Zurück zur Startseite</a>
+
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>
