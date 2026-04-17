@@ -486,6 +486,16 @@
     }
 
     @media (max-width: 720px) {
+      .hero-video {
+        display: none;
+      }
+
+      .hero {
+        background:
+          linear-gradient(120deg, rgba(11,18,32,0.82), rgba(29,78,216,0.48)),
+          url('Gewerbegebiet.png') center/cover no-repeat;
+      }
+
       .container {
         width: calc(100% - 20px);
       }
@@ -647,7 +657,7 @@
   <header class="hero">
     <div class="hero-video">
       <video autoplay muted loop playsinline>
-        <source src="Gewerbegebiet.mp4" type="video/mp4">
+        <source src="Gewerbegebiet-loop.mp4" type="video/mp4">
       </video>
     </div>
     <div class="hero-overlay"></div>
@@ -673,7 +683,7 @@
           <li>PV-Asset-Management für Betreiber</li>
           <li>EEG-Beratung bei auslaufender Förderung</li>
           <li>Flächenverpachtung für Dach- und Freiflächen</li>
-          <li>Photovoltaik-Reinigung & technische Sichtprüfung</li>
+          <li>Photovoltaik-Reinigung & Sichtprüfung</li>
           <li>Reinigungsleistungen rund ums Objekt</li>
         </ul>
       </div>
@@ -711,17 +721,7 @@
             Ganzheitliche technische und wirtschaftliche Betreuung von Photovoltaikanlagen mit Blick
             auf Anlagenzustand, Dokumentation und nachhaltigen Betrieb.
           </p>
-          <a href="pv-service.html" class="service-link">Mehr zu PV-Service</a>
-        </article>
-
-        <article class="card">
-          <img src="Reinigung_PV-Anlage.jpg" alt="Photovoltaik-Reinigung" class="service-image">
-          <h3>Photovoltaik-Reinigung</h3>
-          <p>
-            Professionelle Reinigung von PV-Modulen und Anlagenflächen für einen gepflegten Zustand,
-            saubere Sichtprüfung und nachvollziehbare Ergebnisse.
-          </p>
-          <a href="pv-service.html" class="service-link">Mehr zur Photovoltaik-Reinigung</a>
+          <a href="pv-service.html" class="service-link">Mehr erfahren</a>
         </article>
 
         <article class="card">
@@ -731,7 +731,7 @@
             Unterstützung bei ausgelaufener oder bald endender EEG-Förderung sowie beim sinnvollen
             Weiterbetrieb Ihrer Photovoltaikanlage.
           </p>
-          <a href="eeg-beratung.html" class="service-link">Mehr zur EEG-Beratung</a>
+          <a href="eeg-beratung.html" class="service-link">Mehr erfahren</a>
         </article>
 
         <article class="card">
@@ -741,27 +741,17 @@
             Einordnung und Vorbereitung von Dach- oder Freiflächen für Photovoltaikprojekte – von
             der Ersteinschätzung bis zur strukturierten Vorbereitung weiterer Gespräche.
           </p>
-          <a href="flaechenverpachtung.html" class="service-link">Mehr zur Flächenverpachtung</a>
+          <a href="flaechenverpachtung.html" class="service-link">Mehr erfahren</a>
         </article>
 
         <article class="card">
-          <img src="Fassadenreinigung Vorher-Nachher.jpg" alt="Fassadenreinigung" class="service-image">
-          <h3>Fassadenreinigung</h3>
+          <img src="Reinigung_PV-Anlage.jpg" alt="Photovoltaik-Reinigung" class="service-image">
+          <h3>Photovoltaik-Reinigung</h3>
           <p>
-            Werterhaltende Außenreinigung für gepflegte und optisch aufgewertete Fassadenflächen an
-            Wohn- und Gewerbeobjekten.
+            Professionelle Reinigung von PV-Modulen und Anlagenflächen für einen gepflegten Zustand,
+            saubere Sichtprüfung und nachvollziehbare Ergebnisse.
           </p>
-          <a href="leistungen.html" class="service-link">Mehr zu Reinigungsleistungen</a>
-        </article>
-
-        <article class="card">
-          <img src="Steinreinigung Vorher-Nachher.jfif" alt="Steinreinigung" class="service-image">
-          <h3>Steinreinigung</h3>
-          <p>
-            Reinigung von Wegen, Hofflächen und sonstigen Steinoberflächen mit Fokus auf Sauberkeit,
-            Werterhalt und ein gepflegtes Erscheinungsbild.
-          </p>
-          <a href="leistungen.html" class="service-link">Mehr zu Reinigungsleistungen</a>
+          <a href="pv-service.html" class="service-link">Mehr erfahren</a>
         </article>
 
         <article class="card">
@@ -771,7 +761,27 @@
             Pflege und optische Aufwertung von Dachflächen für ein sauberes Gesamtbild und einen
             werterhaltenden Außenauftritt.
           </p>
-          <a href="leistungen.html" class="service-link">Mehr zu Reinigungsleistungen</a>
+          <a href="leistungen.html" class="service-link">Mehr erfahren</a>
+        </article>
+
+        <article class="card">
+          <img src="Fassadenreinigung Vorher-Nachher.jpg" alt="Fassadenreinigung" class="service-image">
+          <h3>Fassadenreinigung</h3>
+          <p>
+            Werterhaltende Außenreinigung für gepflegte und optisch aufgewertete Fassadenflächen an
+            Wohn- und Gewerbeobjekten.
+          </p>
+          <a href="leistungen.html" class="service-link">Mehr erfahren</a>
+        </article>
+
+        <article class="card">
+          <img src="Steinreinigung Vorher-Nachher.jfif" alt="Steinreinigung" class="service-image">
+          <h3>Steinreinigung</h3>
+          <p>
+            Reinigung von Wegen, Hofflächen und sonstigen Steinoberflächen mit Fokus auf Sauberkeit,
+            Werterhalt und ein gepflegtes Erscheinungsbild.
+          </p>
+          <a href="leistungen.html" class="service-link">Mehr erfahren</a>
         </article>
       </div>
     </div>
