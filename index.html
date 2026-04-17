@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Weinrich Objektservice | Startseite</title>
-  <meta name="description" content="Weinrich Objektservice unterstützt Betreiber und Eigentümer mit PV-Asset-Management, EEG-Beratung, Flächenverpachtung, Photovoltaik-Reinigung sowie werterhaltenden Reinigungsleistungen rund ums Objekt." />
+  <meta name="description" content="Weinrich Objektservice unterstützt Betreiber von Photovoltaikanlagen sowie Eigentümer von Immobilien und Flächen mit PV-Asset-Management, EEG-Beratung, Flächenverpachtung und Reinigungsleistungen rund ums Objekt." />
 
   <style>
     :root {
@@ -78,7 +78,7 @@
     }
 
     .brand img {
-      height: 225px;
+      height: 92px;
       width: auto;
       display: block;
       margin: 0 auto;
@@ -156,7 +156,7 @@
       position: relative;
       color: #fff;
       overflow: hidden;
-      min-height: 680px;
+      min-height: 700px;
       display: flex;
       align-items: center;
     }
@@ -180,8 +180,8 @@
       inset: 0;
       z-index: 1;
       background:
-        linear-gradient(120deg, rgba(11,18,32,0.84), rgba(29,78,216,0.50)),
-        radial-gradient(circle at top right, rgba(255,255,255,0.12), transparent 28%);
+        linear-gradient(120deg, rgba(11,18,32,0.82), rgba(29,78,216,0.48)),
+        radial-gradient(circle at top right, rgba(255,255,255,0.14), transparent 30%);
     }
 
     .hero .container {
@@ -210,7 +210,7 @@
       margin: 0 0 16px;
       font-size: clamp(34px, 5vw, 58px);
       line-height: 1.05;
-      max-width: 900px;
+      max-width: 920px;
     }
 
     .hero p {
@@ -298,27 +298,6 @@
       font-size: 18px;
     }
 
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin-top: 24px;
-    }
-
-    .stat {
-      background: var(--white);
-      border-radius: 20px;
-      padding: 22px;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border);
-    }
-
-    .stat strong {
-      display: block;
-      font-size: 28px;
-      margin-bottom: 6px;
-    }
-
     .grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -365,6 +344,18 @@
       background: #fff;
     }
 
+    .service-link {
+      display: inline-flex;
+      margin-top: 10px;
+      color: var(--blue);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .service-link:hover {
+      text-decoration: underline;
+    }
+
     .split {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -378,6 +369,21 @@
       border-radius: var(--radius);
       padding: 28px;
       box-shadow: var(--shadow);
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 24px;
+    }
+
+    .trust-item {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
     }
 
     .contact-box {
@@ -409,37 +415,6 @@
       object-fit: cover;
       border-radius: 16px;
       border: 3px solid rgba(255,255,255,0.25);
-    }
-
-    .trust-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-      margin-top: 24px;
-    }
-
-    .trust-item {
-      background: var(--white);
-      border-radius: var(--radius);
-      padding: 26px;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border);
-    }
-
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 18px;
-    }
-
-    .pill {
-      border-radius: 999px;
-      padding: 10px 14px;
-      background: var(--white);
-      border: 1px solid var(--border);
-      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
-      font-size: 14px;
     }
 
     .request-float {
@@ -498,7 +473,6 @@
 
     @media (max-width: 980px) {
       .hero-grid,
-      .stats,
       .grid,
       .trust-grid {
         grid-template-columns: 1fr 1fr;
@@ -572,7 +546,6 @@
       }
 
       .hero-grid,
-      .stats,
       .grid,
       .trust-grid,
       .split {
@@ -605,11 +578,10 @@
       }
 
       .card,
-      .stat,
+      .highlight,
       .trust-item,
       .contact-box,
-      .hero-card,
-      .highlight {
+      .hero-card {
         padding: 20px;
         border-radius: 18px;
       }
@@ -672,7 +644,7 @@
     </div>
   </nav>
 
-  <header class="hero" id="hero">
+  <header class="hero">
     <div class="hero-video">
       <video autoplay muted loop playsinline>
         <source src="Gewerbegebiet.mp4" type="video/mp4">
@@ -682,29 +654,27 @@
 
     <div class="container hero-grid">
       <div>
-        <div class="eyebrow">PV-Asset-Management · EEG-Beratung · Flächenverpachtung · Photovoltaik-Reinigung</div>
-        <h1>Technische Betreuung, EEG-Beratung und werterhaltender Service rund um Photovoltaik und Objekt</h1>
+        <div class="eyebrow">PV-Asset-Management · EEG-Beratung · Flächenverpachtung · Reinigung rund ums Objekt</div>
+        <h1>PV-Asset-Management, EEG-Beratung, Flächenverpachtung und Reinigung aus einer Hand</h1>
         <p>
           Weinrich Objektservice unterstützt Betreiber von Photovoltaikanlagen sowie Eigentümer von
-          Immobilien und Flächen mit einem klaren Fokus auf <strong>PV-Asset-Management</strong>,
-          fundierte <strong>EEG-Beratung</strong>, strukturierte <strong>Flächenverpachtung</strong>
-          und praktische Dienstleistungen wie <strong>Photovoltaik-Reinigung</strong>,
-          Fassaden-, Stein- und Dachreinigung.
+          Immobilien und Flächen mit technischer Begleitung, wirtschaftlicher Einordnung und
+          werterhaltenden Reinigungsleistungen.
         </p>
         <div class="actions">
           <a href="#kontakt" class="btn btn-primary">Jetzt Anfrage stellen</a>
-          <a href="leistungen.html" class="btn btn-secondary">Leistungen ansehen</a>
+          <a href="#leistungen" class="btn btn-secondary">Leistungen ansehen</a>
         </div>
       </div>
 
       <div class="hero-card">
-        <h3>Womit wir Sie unterstützen</h3>
+        <h3>Direkt die passenden Themen finden</h3>
         <ul>
           <li>PV-Asset-Management für Betreiber</li>
-          <li>Beratung bei ausgelaufener oder endender EEG-Förderung</li>
-          <li>Prüfung von Dach- und Freiflächen für PV-Projekte</li>
+          <li>EEG-Beratung bei auslaufender Förderung</li>
+          <li>Flächenverpachtung für Dach- und Freiflächen</li>
           <li>Photovoltaik-Reinigung & technische Sichtprüfung</li>
-          <li>4K-Drohnenaufnahmen zur Dokumentation</li>
+          <li>Reinigungsleistungen rund ums Objekt</li>
         </ul>
       </div>
     </div>
@@ -713,17 +683,12 @@
   <section class="section section-alt">
     <div class="container">
       <div class="headline">
-        <h2>Worauf Besucher auf Ihrer Startseite sofort stoßen sollten</h2>
+        <h2>Leistungen mit Fokus auf Zustand, Werterhalt und wirtschaftliche Perspektive</h2>
         <p>
-          Die Seite soll auf einen Blick zeigen, dass Sie nicht nur reinigen, sondern Betreiber und
-          Eigentümer auch bei wirtschaftlichen und technischen Fragen rund um Photovoltaik begleiten.
+          Ob Photovoltaikanlage, Dachfläche oder Gebäudehülle: Hier finden Sie Leistungen rund um
+          technische Betreuung, Reinigung, Dokumentation und Einordnung – verständlich,
+          nachvollziehbar und praxisnah.
         </p>
-      </div>
-
-      <div class="stats">
-        <div class="stat"><strong>PV</strong>Technische Begleitung und Zustandsprüfung von Photovoltaikanlagen</div>
-        <div class="stat"><strong>EEG</strong>Beratung bei ausgelaufener oder bald endender Förderung</div>
-        <div class="stat"><strong>Fläche</strong>Einordnung und Vorbereitung von Dach- und Freiflächen für PV-Projekte</div>
       </div>
     </div>
   </section>
@@ -731,96 +696,82 @@
   <section id="leistungen" class="section">
     <div class="container">
       <div class="headline">
-        <h2>Unsere Schwerpunkte</h2>
+        <h2>Unsere Leistungsbereiche im Überblick</h2>
         <p>
-          Die Startseite bündelt die wichtigsten Leistungen verständlich und ohne Überladung. So
-          erkennen Besucher schnell, ob Ihr Angebot für ihre Situation relevant ist.
+          Die wichtigsten Themen werden auf der Startseite kurz angestoßen. Über die jeweiligen
+          Unterseiten finden Sie vertiefende Informationen zu den einzelnen Leistungen.
         </p>
       </div>
 
       <div class="grid">
         <article class="card">
-          <img src="PV Vorher-Nachher.jfif" class="service-image" alt="PV Asset Management">
+          <img src="PV Vorher-Nachher.jfif" alt="PV-Asset-Management" class="service-image">
           <h3>PV-Asset-Management</h3>
           <p>
-            Ganzheitliche technische und wirtschaftliche Betreuung von Photovoltaikanlagen mit Fokus
-            auf Leistung, Anlagenzustand und nachhaltigen Betrieb.
+            Ganzheitliche technische und wirtschaftliche Betreuung von Photovoltaikanlagen mit Blick
+            auf Anlagenzustand, Dokumentation und nachhaltigen Betrieb.
           </p>
-          <ul>
-            <li>Dokumentation und Zustandsprüfung</li>
-            <li>Empfehlungen für Reinigung und Wartung</li>
-            <li>Strategische Begleitung nach EEG-Ende</li>
-          </ul>
+          <a href="pv-service.html" class="service-link">Mehr zu PV-Service</a>
         </article>
 
         <article class="card">
-          <img src="EEG-Beratung.png" class="service-image" alt="EEG Beratung">
-          <h3>EEG-Beratung</h3>
-          <p>
-            Unterstützung für Betreiber, wenn die EEG-Förderung ausgelaufen ist oder in absehbarer
-            Zeit endet. Ziel ist eine verständliche und realistische Einordnung.
-          </p>
-          <ul>
-            <li>Einordnung nach EEG-Ende</li>
-            <li>Beratung zum Weiterbetrieb</li>
-            <li>Technische und wirtschaftliche Orientierung</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <img src="Gewerbegebiet.png" class="service-image" alt="Flächenverpachtung">
-          <h3>Flächenverpachtung</h3>
-          <p>
-            Unterstützung bei der Ersteinschätzung von Dach- und Freiflächen für Photovoltaikprojekte
-            sowie bei der Vorbereitung für Gespräche mit Projektinvestoren.
-          </p>
-          <ul>
-            <li>Einordnung von Dach- und Freiflächen</li>
-            <li>Vorbereitung relevanter Eckdaten</li>
-            <li>Begleitung aus Sicht des Eigentümers</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <img src="Reinigung_PV-Anlage.jpg" class="service-image" alt="Photovoltaik Reinigung">
+          <img src="Reinigung_PV-Anlage.jpg" alt="Photovoltaik-Reinigung" class="service-image">
           <h3>Photovoltaik-Reinigung</h3>
           <p>
-            Professionelle Reinigung von Modulen und Anlagenflächen für saubere Sichtprüfung,
-            nachvollziehbare Ergebnisse und einen gepflegten Anlagenzustand.
+            Professionelle Reinigung von PV-Modulen und Anlagenflächen für einen gepflegten Zustand,
+            saubere Sichtprüfung und nachvollziehbare Ergebnisse.
           </p>
-          <ul>
-            <li>Reinigung von PV-Modulen</li>
-            <li>Vorher-/Nachher-Dokumentation</li>
-            <li>Sauberer Anlagenzustand</li>
-          </ul>
+          <a href="pv-service.html" class="service-link">Mehr zur Photovoltaik-Reinigung</a>
         </article>
 
         <article class="card">
-          <img src="Technische Sichtprüfung Drohne.png" class="service-image" alt="Technische Sichtprüfung">
-          <h3>Technische Sichtprüfung & 4K-Dokumentation</h3>
+          <img src="EEG-Beratung.png" alt="EEG-Beratung" class="service-image">
+          <h3>EEG-Beratung</h3>
           <p>
-            Hochauflösende Drohnenaufnahmen ermöglichen eine sichere Sichtprüfung und eine saubere
-            Dokumentationsbasis für weitere Entscheidungen.
+            Unterstützung bei ausgelaufener oder bald endender EEG-Förderung sowie beim sinnvollen
+            Weiterbetrieb Ihrer Photovoltaikanlage.
           </p>
-          <ul>
-            <li>4K-Drohnenaufnahmen</li>
-            <li>Erkennung von Verschmutzungen und Auffälligkeiten</li>
-            <li>Übersicht für Betreiber und Eigentümer</li>
-          </ul>
+          <a href="eeg-beratung.html" class="service-link">Mehr zur EEG-Beratung</a>
         </article>
 
         <article class="card">
-          <img src="Fassadenreinigung Vorher-Nachher.jpg" class="service-image" alt="Objektreinigung">
-          <h3>Reinigungsleistungen rund ums Objekt</h3>
+          <img src="Gewerbegebiet.png" alt="Flächenverpachtung" class="service-image">
+          <h3>Flächenverpachtung</h3>
           <p>
-            Ergänzend bieten wir werterhaltende Reinigung für Fassaden, Steinflächen und Dachbereiche
-            an – dort, wo ein gepflegter Zustand und ein sauberes Gesamtbild wichtig sind.
+            Einordnung und Vorbereitung von Dach- oder Freiflächen für Photovoltaikprojekte – von
+            der Ersteinschätzung bis zur strukturierten Vorbereitung weiterer Gespräche.
           </p>
-          <ul>
-            <li>Fassadenreinigung</li>
-            <li>Steinreinigung</li>
-            <li>Dachreinigung</li>
-          </ul>
+          <a href="flaechenverpachtung.html" class="service-link">Mehr zur Flächenverpachtung</a>
+        </article>
+
+        <article class="card">
+          <img src="Fassadenreinigung Vorher-Nachher.jpg" alt="Fassadenreinigung" class="service-image">
+          <h3>Fassadenreinigung</h3>
+          <p>
+            Werterhaltende Außenreinigung für gepflegte und optisch aufgewertete Fassadenflächen an
+            Wohn- und Gewerbeobjekten.
+          </p>
+          <a href="leistungen.html" class="service-link">Mehr zu Reinigungsleistungen</a>
+        </article>
+
+        <article class="card">
+          <img src="Steinreinigung Vorher-Nachher.jfif" alt="Steinreinigung" class="service-image">
+          <h3>Steinreinigung</h3>
+          <p>
+            Reinigung von Wegen, Hofflächen und sonstigen Steinoberflächen mit Fokus auf Sauberkeit,
+            Werterhalt und ein gepflegtes Erscheinungsbild.
+          </p>
+          <a href="leistungen.html" class="service-link">Mehr zu Reinigungsleistungen</a>
+        </article>
+
+        <article class="card">
+          <img src="Dachreinigung.png" alt="Dachreinigung" class="service-image">
+          <h3>Dachreinigung</h3>
+          <p>
+            Pflege und optische Aufwertung von Dachflächen für ein sauberes Gesamtbild und einen
+            werterhaltenden Außenauftritt.
+          </p>
+          <a href="leistungen.html" class="service-link">Mehr zu Reinigungsleistungen</a>
         </article>
       </div>
     </div>
@@ -829,28 +780,31 @@
   <section class="section section-alt">
     <div class="container split">
       <div class="highlight">
-        <h2>Warum die Kombination aus Beratung und Ausführung sinnvoll ist</h2>
+        <h2>Technische Sichtprüfung & 4K-Dokumentation</h2>
         <p>
-          Viele Eigentümer und Betreiber suchen nicht nur eine einzelne Dienstleistung, sondern eine
-          sinnvolle Einordnung: Was ist technisch nötig, wirtschaftlich sinnvoll und praktisch
-          umsetzbar? Genau an dieser Stelle setzt Ihre Positionierung an.
+          Für Photovoltaikanlagen, Dächer und schwer zugängliche Bereiche ermöglichen
+          Drohnenaufnahmen eine sichere Sichtprüfung und eine klare Dokumentationsgrundlage für
+          weitere Entscheidungen.
         </p>
-        <div class="pill-row">
-          <span class="pill">Technische Bewertung</span>
-          <span class="pill">Wirtschaftliche Orientierung</span>
-          <span class="pill">Saubere Dokumentation</span>
-          <span class="pill">Persönlicher Ansprechpartner</span>
-        </div>
+        <ul>
+          <li>Visuelle Kontrolle von Photovoltaikanlagen</li>
+          <li>Erkennung von Verschmutzungen und Auffälligkeiten</li>
+          <li>Dokumentation für Betreiber und Eigentümer</li>
+        </ul>
       </div>
 
       <div class="card">
-        <h3>Für wen Ihr Angebot besonders interessant ist</h3>
+        <h3>Warum sich Eigentümer und Betreiber für eine strukturierte Begleitung entscheiden</h3>
+        <p>
+          Viele Anliegen rund um Photovoltaik und Objektservice hängen zusammen: Zustand der Anlage,
+          Reinigungsbedarf, EEG-Ende, Dokumentation oder die Frage, ob sich eine Fläche für ein
+          Projekt eignet. Eine klare Einordnung hilft dabei, die richtigen nächsten Schritte zu
+          wählen.
+        </p>
         <ul>
-          <li>Betreiber älterer Photovoltaikanlagen</li>
-          <li>Eigentümer mit auslaufender EEG-Förderung</li>
-          <li>Gewerbeobjekte mit großen Dachflächen</li>
-          <li>Eigentümer von Dach- oder Freiflächen für PV</li>
-          <li>Immobilienbesitzer mit Fokus auf Werterhalt</li>
+          <li>Technische Bewertung und nachvollziehbare Dokumentation</li>
+          <li>Wirtschaftliche Orientierung bei EEG-Ende</li>
+          <li>Werterhaltende Reinigung rund ums Objekt</li>
         </ul>
       </div>
     </div>
@@ -859,26 +813,26 @@
   <section class="section">
     <div class="container">
       <div class="headline">
-        <h2>Warum Besucher Vertrauen aufbauen</h2>
+        <h2>Praxisnah, verständlich und auf die jeweilige Situation abgestimmt</h2>
         <p>
-          Vertrauen entsteht, wenn Angebot, Auftreten und Kommunikation zusammenpassen. Deshalb sollte
-          die Startseite nicht nur Leistungen nennen, sondern auch Klarheit und Verlässlichkeit
-          vermitteln.
+          Nicht jede Anlage, Fläche oder Immobilie braucht dieselbe Lösung. Deshalb steht eine
+          nachvollziehbare Einschätzung im Vordergrund – klar kommuniziert, sauber dokumentiert und
+          an der tatsächlichen Ausgangslage orientiert.
         </p>
       </div>
 
       <div class="trust-grid">
         <div class="trust-item">
           <h3>Persönlicher Ansprechpartner</h3>
-          <p>Mit Leon Weinrich haben Interessenten einen direkten Ansprechpartner – ohne anonyme Vermittlung.</p>
+          <p>Direkte Betreuung durch Leon Weinrich – ohne anonyme Vermittlung und ohne unnötige Umwege.</p>
         </div>
         <div class="trust-item">
-          <h3>Praxisnahe Einordnung</h3>
-          <p>Statt pauschaler Versprechen steht eine realistische, verständliche und saubere Einschätzung im Vordergrund.</p>
+          <h3>Verständliche Einordnung</h3>
+          <p>Klare und praxisnahe Einschätzungen statt technischer Überforderung oder pauschaler Versprechen.</p>
         </div>
         <div class="trust-item">
           <h3>Beratung & Umsetzung</h3>
-          <p>Von der Bewertung über die Dokumentation bis zur Reinigung oder Flächenprüfung erhalten Besucher ein stimmiges Gesamtbild.</p>
+          <p>Von der Bewertung über Dokumentation und Reinigung bis zur Flächenprüfung entsteht ein stimmiges Gesamtbild.</p>
         </div>
       </div>
     </div>
@@ -897,8 +851,8 @@
         </div>
 
         <p>
-          Ich unterstütze Betreiber von Photovoltaikanlagen sowie Eigentümer von Immobilien und
-          Flächen bei der technischen Bewertung, Reinigung und wirtschaftlichen Einordnung.
+          Ob PV-Asset-Management, EEG-Beratung, Flächenverpachtung oder Reinigungsleistung –
+          schildern Sie kurz Ihr Anliegen. So kann die Anfrage gezielt eingeordnet werden.
         </p>
 
         <p>
@@ -917,13 +871,12 @@
       </div>
 
       <div class="card">
-        <h3>Unverbindliche Anfrage</h3>
+        <h3>Unverbindlich anfragen</h3>
         <p>
-          Ob EEG-Beratung, Flächenverpachtung, PV-Service oder Reinigungsleistung – beschreiben Sie
-          kurz Ihr Anliegen, damit die Anfrage gezielt eingeordnet werden kann.
+          Nutzen Sie das Kontaktformular für Ihre Anfrage zu Photovoltaik, Flächenverpachtung oder
+          Reinigungsleistungen. Über die Kontaktseite können Sie Ihr Anliegen direkt übermitteln.
         </p>
-
-        <a href="kontakt.html" class="btn btn-primary" style="margin-top:8px;">Zum Kontaktformular</a>
+        <a href="kontakt.html" class="btn btn-primary" style="margin-top:10px;">Zum Kontaktformular</a>
       </div>
     </div>
   </section>
