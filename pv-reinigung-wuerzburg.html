@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PV Reinigung Würzburg | Photovoltaik-Reinigung vom Profi</title>
+  <meta name="description" content="PV Reinigung in Würzburg und Umgebung: professionelle Photovoltaik-Reinigung, Sichtprüfung und 4K-Dokumentation für Betreiber, Gewerbe und Hallendächer. Jetzt unverbindlich anfragen." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://weinrichobjektservice.de/pv-reinigung-wuerzburg.html" />
+
+  <style>
+    :root {
+      --blue: #1d4ed8;
+      --navy: #0f172a;
+      --muted: #475569;
+      --white: #ffffff;
+      --border: rgba(15,23,42,0.08);
+      --shadow: 0 20px 60px rgba(15,23,42,0.10);
+      --radius: 24px;
+      --green: #16a34a;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--navy);
+      background: linear-gradient(180deg, #f8fbff 0%, #edf4fb 100%);
+      line-height: 1.65;
+    }
+
+    a { color: inherit; }
+
+    .container {
+      width: min(1160px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      background: rgba(255, 255, 255, 0.92);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+      transition: transform 0.28s ease;
+    }
+
+    .nav.nav-hidden { transform: translateY(-100%); }
+
+    .nav-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      padding: 2px 0;
+    }
+
+    .brand {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      text-decoration: none;
+    }
+
+    .brand img {
+      height: 225px;
+      width: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      font-size: 13px;
+      align-items: center;
+      margin-top: -4px;
+      padding-bottom: 4px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      padding: 4px 10px;
+      border-radius: 999px;
+      transition: all 0.2s ease;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    .nav-links a:hover {
+      background: #eef5ff;
+      color: var(--blue);
+    }
+
+    .nav-cta {
+      background: #ffffff;
+      color: var(--blue) !important;
+      padding: 6px 12px !important;
+      border-radius: 999px;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.10);
+      border: 2px solid var(--blue);
+    }
+
+    .nav-cta:hover {
+      background: var(--blue);
+      color: #ffffff !important;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 46px;
+      height: 46px;
+      padding: 0;
+      border: 1px solid rgba(15, 23, 42, 0.12);
+      background: #ffffff;
+      color: #0f172a;
+      border-radius: 10px;
+      font-size: 20px;
+      line-height: 1;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .hero {
+      background:
+        linear-gradient(120deg, rgba(11,18,32,0.84), rgba(29,78,216,0.52)),
+        url('Reinigung_PV-Anlage.jpg') center/cover;
+      color: #fff;
+      padding: 88px 0 76px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.14);
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.05;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #dbeafe;
+      margin: 0 0 24px;
+      max-width: 760px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 0 20px;
+      border-radius: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      opacity: 0.96;
+    }
+
+    .btn-primary {
+      background: var(--green);
+      color: #fff;
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .hero-card,
+    .card,
+    .highlight,
+    .contact-box {
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.10);
+      border-color: rgba(255,255,255,0.14);
+      padding: 24px;
+    }
+
+    .hero-card h2 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+
+    .section {
+      padding: 74px 0;
+    }
+
+    .section-alt {
+      background: rgba(255,255,255,0.72);
+    }
+
+    .headline {
+      max-width: 820px;
+      margin-bottom: 24px;
+    }
+
+    .headline h2 {
+      margin: 0 0 12px;
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.1;
+    }
+
+    .headline p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .card {
+      background: var(--white);
+      padding: 26px;
+      height: 100%;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    .card p {
+      color: var(--muted);
+      margin: 0 0 12px;
+    }
+
+    .card ul {
+      margin: 12px 0 0;
+      padding-left: 18px;
+    }
+
+    .highlight {
+      background: linear-gradient(135deg, #eff6ff, #ecfeff);
+      padding: 28px;
+      border-color: #bfdbfe;
+    }
+
+    .contact-box {
+      background: linear-gradient(135deg, #0b1220, #1e3a8a);
+      color: #fff;
+      padding: 26px;
+    }
+
+    .contact-box p,
+    .contact-box li {
+      color: #dbeafe;
+    }
+
+    .contact-box a {
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .contact-box a:hover { text-decoration: underline; }
+
+    .profile-image {
+      width: 96px;
+      height: 96px;
+      object-fit: cover;
+      border-radius: 16px;
+      border: 3px solid rgba(255,255,255,0.25);
+    }
+
+    .service-image {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 18px;
+      margin-bottom: 16px;
+      border: 1px solid var(--border);
+      background: #fff;
+    }
+
+    .request-float {
+      position: fixed;
+      left: 18px;
+      bottom: 18px;
+      background: var(--blue);
+      color: #ffffff;
+      min-height: 52px;
+      padding: 0 18px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      box-shadow: 0 10px 25px rgba(29, 78, 216, 0.28);
+      z-index: 999;
+      text-decoration: none;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      background: #25D366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+      z-index: 999;
+      text-decoration: none;
+    }
+
+    footer {
+      padding: 30px 0 46px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 820px) {
+      .split {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .container {
+        width: calc(100% - 20px);
+      }
+
+      .nav-inner {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 0;
+        padding: 8px 0;
+      }
+
+      .brand {
+        grid-column: 2;
+        justify-self: center;
+        justify-content: center;
+        width: auto;
+        pointer-events: none;
+        cursor: default;
+      }
+
+      .brand img {
+        height: 130px;
+        margin: 0;
+      }
+
+      .menu-toggle {
+        display: flex;
+        grid-column: 3;
+        justify-self: end;
+      }
+
+      .nav-links {
+        display: none;
+        grid-column: 1 / -1;
+        margin-top: 8px;
+        padding: 0 0 8px 0;
+        width: 100%;
+      }
+
+      .nav-links.menu-open {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+      }
+
+      .nav-links a {
+        width: 100%;
+        text-align: center;
+        padding: 10px 14px;
+        font-size: 14px;
+      }
+
+      .hero {
+        padding: 56px 0 44px;
+      }
+
+      .hero-grid,
+      .grid,
+      .split {
+        grid-template-columns: 1fr !important;
+      }
+
+      h1 {
+        font-size: 34px;
+        line-height: 1.12;
+      }
+
+      .hero p {
+        font-size: 16px;
+        max-width: 100%;
+        padding: 0 4px;
+      }
+
+      .actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 320px;
+      }
+
+      .section {
+        padding: 48px 0;
+      }
+
+      .card,
+      .highlight,
+      .contact-box,
+      .hero-card {
+        padding: 20px;
+        border-radius: 18px;
+      }
+
+      .service-image {
+        height: 180px;
+      }
+
+      .profile-image {
+        width: 110px;
+        height: 110px;
+      }
+
+      .headline h2 {
+        font-size: 30px;
+      }
+
+      .headline p,
+      .card p,
+      .contact-box p {
+        font-size: 16px;
+      }
+
+      .request-float {
+        left: 10px;
+        bottom: 10px;
+        padding: 12px 16px;
+        min-height: 46px;
+        font-size: 14px;
+      }
+
+      .whatsapp-float {
+        right: 10px;
+        bottom: 10px;
+        width: 52px;
+        height: 52px;
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <img src="Weinrich Objektservice.png" alt="Weinrich Objektservice Logo">
+      </a>
+
+      <button class="menu-toggle" aria-label="Menü öffnen" type="button">☰</button>
+
+      <div class="nav-links">
+        <a href="index.html">Startseite</a>
+        <a href="leistungen.html">Leistungen</a>
+        <a href="pv-service.html">PV-Service</a>
+        <a href="flaechenverpachtung.html">Flächenverpachtung</a>
+        <a href="eeg-beratung.html">EEG-Beratung</a>
+        <a href="kontakt.html" class="nav-cta">Kontakt</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">PV Reinigung · Photovoltaik-Reinigung · Technische Sichtprüfung · 4K-Dokumentation</div>
+        <h1>PV Reinigung in Würzburg und Umgebung</h1>
+        <p>
+          Weinrich Objektservice unterstützt Betreiber von Photovoltaikanlagen in Würzburg und Umgebung
+          mit professioneller PV Reinigung, technischer Sichtprüfung, 4K-Dokumentation und
+          praxisnahem PV-Service für einen sauberen Anlagenzustand und eine bessere Einordnung
+          weiterer Maßnahmen.
+        </p>
+        <div class="actions">
+          <a href="#kontakt" class="btn btn-primary">Jetzt unverbindlich anfragen</a>
+          <a href="pv-service.html" class="btn btn-secondary">Zum PV-Service</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h2>Wann eine PV Reinigung sinnvoll sein kann</h2>
+        <ul>
+          <li>sichtbare Verschmutzungen auf Modulen</li>
+          <li>unklarer Anlagenzustand</li>
+          <li>vor einer technischen Bewertung</li>
+          <li>zur Vorher-/Nachher-Dokumentation</li>
+          <li>bei gewerblichen Dachflächen und Hallendächern</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="headline">
+        <h2>Photovoltaik-Reinigung für Betreiber, Gewerbe und Hallendächer</h2>
+        <p>
+          Eine professionelle PV Reinigung hilft dabei, den Zustand von Photovoltaikanlagen besser
+          einzuschätzen und Reinigung, Dokumentation oder weitere technische Maßnahmen fundierter
+          zu planen. Besonders bei verschmutzten Modulen, unklaren Auffälligkeiten oder älteren
+          Anlagen kann eine strukturierte Sichtprüfung sinnvoll sein.
+        </p>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <h3>PV Reinigung</h3>
+          <p>
+            Professionelle Reinigung von Photovoltaik-Modulen und Anlagenflächen für einen gepflegten
+            Zustand, saubere Sichtprüfung und nachvollziehbare Ergebnisse.
+          </p>
+          <ul>
+            <li>Reinigung von PV-Modulen</li>
+            <li>Vorher-/Nachher-Dokumentation</li>
+            <li>sauberer Anlagenzustand</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Technische Sichtprüfung</h3>
+          <p>
+            Sichtprüfungen helfen dabei, Auffälligkeiten, Verschmutzungen und den allgemeinen Zustand
+            der Anlage besser einzuordnen.
+          </p>
+          <ul>
+            <li>visuelle Kontrolle von Photovoltaikanlagen</li>
+            <li>Erkennung von Auffälligkeiten</li>
+            <li>Grundlage für weitere Entscheidungen</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>4K-Dokumentation</h3>
+          <p>
+            Mit hochauflösenden Drohnenaufnahmen lassen sich auch schwer zugängliche Bereiche
+            übersichtlich und nachvollziehbar dokumentieren.
+          </p>
+          <ul>
+            <li>4K-Drohnenaufnahmen</li>
+            <li>Übersicht über die gesamte Anlage</li>
+            <li>Dokumentation für Betreiber</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container split">
+      <div class="highlight">
+        <h2>Warum regelmäßige PV Reinigung sinnvoll sein kann</h2>
+        <p>
+          Ein sauberer und dokumentierter Anlagenzustand schafft mehr Übersicht für Betreiber und
+          erleichtert die Planung weiterer Schritte. Regelmäßige PV Reinigung und technische
+          Sichtprüfung können helfen, Verschmutzungen, Auffälligkeiten und Entwicklungen besser
+          einzuordnen.
+        </p>
+        <ul>
+          <li>bessere Übersicht über den Anlagenzustand</li>
+          <li>klare Dokumentation von Entwicklungen</li>
+          <li>praktische Grundlage für weitere Maßnahmen</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <img src="PV Vorher-Nachher.jfif" alt="Vorher Nachher Photovoltaik Reinigung" class="service-image">
+        <h3>Vorher-/Nachher-Dokumentation</h3>
+        <p>
+          Gerade bei gewerblichen Anlagen, Hallendächern und größeren Flächen ist eine
+          nachvollziehbare Dokumentation hilfreich – sowohl für die Einordnung des Zustands
+          als auch für spätere Entscheidungen.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <div class="contact-box">
+        <div style="display:flex; gap:20px; align-items:center; margin-bottom:20px; flex-wrap:wrap;">
+          <img src="Leon Weinrich.JPG" alt="Leon Weinrich" class="profile-image">
+          <div>
+            <h2 style="margin:0 0 6px 0;">Ihr Ansprechpartner</h2>
+            <strong>Leon Weinrich</strong><br>
+            PV-Asset-Management & Objektservice
+          </div>
+        </div>
+
+        <p>
+          Ich unterstütze Betreiber von Photovoltaikanlagen in Ochsenfurt, Würzburg und Umgebung
+          bei der technischen Bewertung, Reinigung und Dokumentation ihrer Anlagen.
+        </p>
+
+        <p>
+          <strong>Weinrich Objektservice</strong><br>
+          Leon Weinrich<br>
+          Sudetenstr. 2<br>
+          97199 Ochsenfurt
+        </p>
+
+        <p>
+          <strong>Kontakt:</strong><br>
+          Mobil: <a href="tel:+4916090248569">0160 / 90248569</a><br>
+          Festnetz: <a href="tel:+4993130513743">0931 / 30513743</a><br>
+          E-Mail: <a href="mailto:weinrichobjektservice@gmail.com">weinrichobjektservice@gmail.com</a>
+        </p>
+      </div>
+
+      <div class="card" id="kontakt">
+        <h3>Unverbindlich anfragen</h3>
+        <p>
+          Ob PV Reinigung, Sichtprüfung oder technische Einordnung – schildern Sie kurz Ihr Anliegen.
+          So lässt sich die Anfrage gezielt vorbereiten.
+        </p>
+        <a href="kontakt.html" class="btn btn-primary" style="margin-top:10px;">Jetzt Anfrage senden</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-bottom:10px;">
+      <a href="index.html" style="text-decoration:none;">Zur Startseite</a>
+      <a href="impressum.html" style="text-decoration:none;">Impressum</a>
+      <a href="datenschutz.html" style="text-decoration:none;">Datenschutz</a>
+    </div>
+    © Weinrich Objektservice · PV Reinigung Würzburg · Photovoltaik-Reinigung
+  </footer>
+
+  <a href="#kontakt" class="request-float">Anfrage</a>
+  <a href="https://wa.me/4916090248569" class="whatsapp-float" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">✆</a>
+
+  <script>
+    let lastScrollY = window.scrollY;
+    const nav = document.querySelector(".nav");
+
+    window.addEventListener("scroll", function () {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY <= 10) {
+        nav.classList.remove("nav-hidden");
+        lastScrollY = currentScrollY;
+        return;
+      }
+
+      if (currentScrollY > lastScrollY) {
+        nav.classList.add("nav-hidden");
+      } else {
+        nav.classList.remove("nav-hidden");
+      }
+
+      lastScrollY = currentScrollY;
+    });
+  </script>
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("menu-open");
+      });
+    }
+  </script>
+
+</body>
+</html>
