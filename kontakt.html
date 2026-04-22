@@ -461,26 +461,29 @@
         </p>
 
           <form id="kontakt-form" action="https://formspree.io/f/mzdyjnkl" method="POST">
-            <input type="hidden" name="_subject" value="Neue Anfrage über die Website">
-            <input type="hidden" name="_language" value="de">
-  <input type="hidden" name="_subject" value="Neue Anfrage EEG-Beratung">
+  <input type="hidden" name="_subject" value="Neue Anfrage über die Website">
   <input type="hidden" name="_language" value="de">
 
-            <select name="Leistung">
-              <option>PV-Asset-Management</option>
-              <option>EEG-Beratung</option>
-              <option>Flächenverpachtung / PV-Projektprüfung</option>
-              <option>Photovoltaik-Reinigung</option>
-              <option>Dachreinigung</option>
-              <option>Fassadenreinigung</option>
-              <option>Steinreinigung</option>
-            </select>
+  <div style="display:grid; gap:14px;">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="tel" name="telefon" placeholder="Telefon">
+    <input type="email" name="email" placeholder="E-Mail" required>
 
-            <textarea name="Nachricht" rows="5" placeholder="Ihre Anfrage..."></textarea>
+    <select name="leistung">
+      <option>PV-Asset-Management</option>
+      <option>EEG-Beratung</option>
+      <option>Flächenverpachtung / PV-Projektprüfung</option>
+      <option>Photovoltaik-Reinigung</option>
+      <option>Dachreinigung</option>
+      <option>Fassadenreinigung</option>
+      <option>Steinreinigung</option>
+    </select>
 
-            <button type="submit">Anfrage senden</button>
-          </div>
-        </form>
+    <textarea name="nachricht" rows="5" placeholder="Ihre Anfrage..."></textarea>
+
+    <button type="submit">Anfrage senden</button>
+  </div>
+</form>
       </div>
 
     </div>
