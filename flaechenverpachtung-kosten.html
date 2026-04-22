@@ -315,6 +315,59 @@
       margin: 0 0 12px;
     }
 
+	  form {
+  display: block;
+  width: 100%;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 14px;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--navy);
+  background: #ffffff;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 4px rgba(29, 78, 216, 0.10);
+}
+
+form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+form button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 0 20px;
+  border: none;
+  border-radius: 14px;
+  background: var(--green);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+form button:hover {
+  transform: translateY(-1px);
+  opacity: 0.96;
+}
+	  
     .card ul {
       margin: 12px 0 0;
       padding-left: 18px;
@@ -749,34 +802,38 @@
       </div>
 
       <div class="card">
-        <h3>Kontaktformular</h3>
+      <h3>Kontaktformular</h3>
 
-        <form action="mailto:weinrichobjektservice@gmail.com" method="post" enctype="text/plain">
-          <div style="display:grid; gap:14px;">
-            <input type="text" name="Name" placeholder="Name" style="padding:14px 16px; border-radius:14px; border:1px solid #cbd5e1; font:inherit;" required>
-            <input type="tel" name="Telefon" placeholder="Telefon" style="padding:14px 16px; border-radius:14px; border:1px solid #cbd5e1; font:inherit;">
-            <input type="email" name="E-Mail" placeholder="E-Mail" style="padding:14px 16px; border-radius:14px; border:1px solid #cbd5e1; font:inherit;" required>
+      <form id="kontakt-form" action="https://formspree.io/f/mzdyjnkl" method="POST">
 
-            <select name="Leistung" style="padding:14px 16px; border-radius:14px; border:1px solid #cbd5e1; font:inherit; background:#fff;">
-	      <option>Flächenverpachtung / PV-Projektprüfung</option>
-	      <option>EEG-Beratung</option>            
-	      <option>PV-Asset-Management</option>
-	      <option>Photovoltaik-Reinigung</option>
-	      <option>Dachreinigung</option>  
-              <option>Fassadenreinigung</option>
-	      <option>Steinreinigung</option>
-            </select>
+        <input type="hidden" name="_subject" value="Neue Anfrage Leistungen-Seite">
+        <input type="hidden" name="_language" value="de">
 
-            <textarea name="Nachricht" rows="6" placeholder="Beschreiben Sie kurz Ihr Objekt und den aktuellen Zustand. So kann besser eingeschätzt werden, ob eine Steinreinigung sinnvoll ist." style="padding:14px 16px; border-radius:14px; border:1px solid #cbd5e1; font:inherit;"></textarea>
+        <div style="display:grid; gap:14px;">
+          <input type="text" name="name" placeholder="Name" required>
+          <input type="tel" name="telefon" placeholder="Telefon">
+          <input type="email" name="email" placeholder="E-Mail" required>
 
-            <button type="submit" style="display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 20px;border-radius:14px;font-weight:700;background:#16a34a;color:#fff;border:none;cursor:pointer;">
-              Anfrage senden
-            </button>
-          </div>
-        </form>
-      </div>
+          <select name="leistung">        
+            <option>Flächenverpachtung</option> 
+            <option>PV-Asset-Management</option>	    
+            <option>EEG-Beratung</option>
+            <option>Photovoltaik-Reinigung</option>
+            <option>Dachreinigung</option>
+            <option>Fassadenreinigung</option>
+            <option>Steinreinigung</option>
+          </select>
+
+          <textarea name="nachricht" rows="5" placeholder="Beschreiben Sie kurz ihr Anliegen"></textarea>
+
+          <button type="submit">Anfrage senden</button>
+        </div>
+
+      </form>
     </div>
-  </section>
+
+  </div>
+</section>
 
   <footer>
     <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-bottom:10px;">
@@ -824,5 +881,35 @@
     }
   </script>
 
+	<script>
+  const kontaktForm = document.getElementById("kontakt-form");
+
+  if (kontaktForm) {
+    kontaktForm.addEventListener("submit", async function (event) {
+      event.preventDefault();
+
+      const formData = new FormData(kontaktForm);
+
+      try {
+        const response = await fetch(kontaktForm.action, {
+          method: "POST",
+          body: formData,
+          headers: {
+            "Accept": "application/json"
+          }
+        });
+
+        if (response.ok) {
+          window.location.href = "danke.html";
+        } else {
+          alert("Fehler beim Senden. Bitte erneut versuchen.");
+        }
+      } catch (error) {
+        alert("Verbindungsfehler. Bitte später erneut versuchen.");
+      }
+    });
+  }
+</script>
+	
 </body>
 </html>
