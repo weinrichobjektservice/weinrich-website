@@ -690,15 +690,35 @@
         </p>
       </div>
 
-      <div class="card" id="kontakt">
+     <div class="card">
         <h3>Unverbindlich anfragen</h3>
         <p>
-          Ob PV Reinigung, Sichtprüfung oder technische Einordnung – schildern Sie kurz Ihr Anliegen.
-          So lässt sich die Anfrage gezielt vorbereiten.
+          Beschreiben Sie kurz Ihr Anliegen. Je genauer Ihre Angaben sind, desto gezielter können wir
+          Ihre Anfrage einordnen.
         </p>
-        <a href="kontakt.html" class="btn btn-primary" style="margin-top:10px;">Jetzt Anfrage senden</a>
+
+        <form action="mailto:weinrichobjektservice@gmail.com" method="post" enctype="text/plain">
+          <div style="display:grid; gap:14px;">
+            <input type="text" name="Name" placeholder="Name" required>
+            <input type="tel" name="Telefon" placeholder="Telefon">
+            <input type="email" name="E-Mail" placeholder="E-Mail" required>
+
+            <select name="Leistung">
+              <option>PV-Asset-Management</option>
+              <option>EEG-Beratung</option>
+              <option>Flächenverpachtung / PV-Projektprüfung</option>
+              <option>Photovoltaik-Reinigung</option>
+              <option>Dachreinigung</option>
+              <option>Fassadenreinigung</option>
+              <option>Steinreinigung</option>
+            </select>
+
+            <textarea name="Nachricht" rows="5" placeholder="Ob PV Reinigung, Sichtprüfung oder technische Einordnung – schildern Sie kurz Ihr Anliegen. So lässt sich die Anfrage gezielt vorbereiten."></textarea>
+
+            <button type="submit">Anfrage senden</button>
+          </div>
+        </form>
       </div>
-    </div>
   </section>
 
   <footer>
