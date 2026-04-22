@@ -688,20 +688,26 @@
           Nutzen Sie das Formular für Ihre Anfrage zu EEG-Beratung, Weiterbetrieb oder PV-Service.
         </p>
 
-        <form action="mailto:weinrichobjektservice@gmail.com" method="post" enctype="text/plain">
-          <input type="text" name="Name" placeholder="Name" required>
-          <input type="tel" name="Telefon" placeholder="Telefon">
-          <input type="email" name="E-Mail" placeholder="E-Mail" required>
-          <select name="Anliegen">
-            <option>EEG-Beratung</option>
-            <option>Weiterbetrieb der PV-Anlage</option>
-            <option>Photovoltaik-Reinigung</option>
-            <option>Technische Sichtprüfung</option>
-            <option>Flächenverpachtung / PV-Projektprüfung</option>
-          </select>
-          <textarea name="Nachricht" rows="6" placeholder="Beschreiben Sie kurz Ihre Anlage oder Ihr Anliegen"></textarea>
-          <button type="submit">Anfrage senden</button>
-        </form>
+        <form action="https://formspree.io/f/mzdyjnkl" method="POST">
+          <input type="hidden" name="_subject" value="Neue Anfrage EEG-Beratung">
+          <input type="hidden" name="_language" value="de">
+            <input type="text" name="name" placeholder="Name" required>
+          <input type="tel" name="telefon" placeholder="Telefon">
+          <input type="email" name="email" placeholder="E-Mail" required>
+
+  <select name="anliegen">
+    <option>EEG-Beratung</option>
+    <option>Weiterbetrieb der PV-Anlage</option>
+    <option>Photovoltaik-Reinigung</option>
+    <option>Technische Sichtprüfung</option>
+    <option>Flächenverpachtung / PV-Projektprüfung</option>
+  </select>
+
+  <textarea name="nachricht" rows="6" placeholder="Beschreiben Sie kurz Ihre Anlage oder Ihr Anliegen"></textarea>
+
+  <button type="submit">Anfrage senden</button>
+
+</form>
       </div>
     </div>
   </section>
