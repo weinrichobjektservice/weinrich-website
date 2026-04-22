@@ -881,14 +881,36 @@
         </p>
       </div>
 
-      <div class="card">
-        <h3>Unverbindlich anfragen</h3>
+        <div class="card">
+        <h3>Jetzt Anfrage stellen</h3>
         <p>
-          Nutzen Sie das Kontaktformular für Ihre Anfrage zu Photovoltaik, Flächenverpachtung oder
-          Reinigungsleistungen. Über die Kontaktseite können Sie Ihr Anliegen direkt übermitteln.
+          Beschreiben Sie kurz Ihr Anliegen. Je genauer Ihre Angaben sind, desto gezielter können wir
+          Ihre Anfrage einordnen.
         </p>
-        <a href="kontakt.html" class="btn btn-primary" style="margin-top:10px;">Zum Kontaktformular</a>
+
+          <form id="kontakt-form" action="https://formspree.io/f/mzdyjnkl" method="POST">
+            <input type="hidden" name="_subject" value="Neue Anfrage über die Website">
+            <input type="hidden" name="_language" value="de">
+  <input type="hidden" name="_subject" value="Neue Anfrage EEG-Beratung">
+  <input type="hidden" name="_language" value="de">
+
+            <select name="Leistung">
+              <option>PV-Asset-Management</option>
+              <option>EEG-Beratung</option>
+              <option>Flächenverpachtung / PV-Projektprüfung</option>
+              <option>Photovoltaik-Reinigung</option>
+              <option>Dachreinigung</option>
+              <option>Fassadenreinigung</option>
+              <option>Steinreinigung</option>
+            </select>
+
+            <textarea name="Nachricht" rows="5" placeholder="Ihre Anfrage..."></textarea>
+
+            <button type="submit">Anfrage senden</button>
+          </div>
+        </form>
       </div>
+
     </div>
   </section>
 
@@ -937,6 +959,36 @@
       });
     }
   </script>
+  
+<script>
+  const kontaktForm = document.getElementById("kontakt-form");
 
+  if (kontaktForm) {
+    kontaktForm.addEventListener("submit", async function (event) {
+      event.preventDefault();
+
+      const formData = new FormData(kontaktForm);
+
+      try {
+        const response = await fetch(kontaktForm.action, {
+          method: "POST",
+          body: formData,
+          headers: {
+            "Accept": "application/json"
+          }
+        });
+
+        if (response.ok) {
+          window.location.href = "danke.html";
+        } else {
+          alert("Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.");
+        }
+      } catch (error) {
+        alert("Beim Senden ist ein Fehler aufgetreten. Bitte prüfen Sie Ihre Verbindung und versuchen Sie es erneut.");
+      }
+    });
+  }
+</script>
+  
 </body>
 </html>
