@@ -701,13 +701,33 @@
         </p>
       </div>
 
-      <div class="card" id="kontakt">
-        <h3>Unverbindlich anfragen</h3>
-        <p>
-          Beschreiben Sie kurz Ihr Objekt und den aktuellen Zustand. So kann besser eingeschätzt
-          werden, ob eine Dachreinigung sinnvoll ist.
-        </p>
-        <a href="kontakt.html" class="btn btn-primary" style="margin-top:10px;">Jetzt Anfrage senden</a>
+      <div class="card">
+        <h3>Kontaktformular</h3>
+
+        <form action="mailto:weinrichobjektservice@gmail.com" method="post" enctype="text/plain">
+          <div style="display:grid; gap:14px;">
+            <input type="text" name="Name" placeholder="Name" style="padding:14px 16px; border-radius:14px; border:1px solid #cbd5e1; font:inherit;" required>
+            <input type="tel" name="Telefon" placeholder="Telefon" style="padding:14px 16px; border-radius:14px; border:1px solid #cbd5e1; font:inherit;">
+            <input type="email" name="E-Mail" placeholder="E-Mail" style="padding:14px 16px; border-radius:14px; border:1px solid #cbd5e1; font:inherit;" required>
+
+            <select name="Leistung" style="padding:14px 16px; border-radius:14px; border:1px solid #cbd5e1; font:inherit; background:#fff;">
+	      <option>Dachreinigung</option>              
+	      <option>PV-Asset-Management</option>
+	      <option>EEG-Beratung</option>
+              <option>Flächenverpachtung / PV-Projektprüfung</option>
+	      <option>Photovoltaik-Reinigung</option>
+              <option>EEG-Beratung</option>
+              <option>Fassadenreinigung</option>
+              <option>Steinreinigung</option>
+            </select>
+
+            <textarea name="Nachricht" rows="6" placeholder="Beschreiben Sie kurz Ihr Objekt und den aktuellen Zustand. So kann besser eingeschätzt werden, ob eine Dachreinigung sinnvoll ist." style="padding:14px 16px; border-radius:14px; border:1px solid #cbd5e1; font:inherit;"></textarea>
+
+            <button type="submit" style="display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 20px;border-radius:14px;font-weight:700;background:#16a34a;color:#fff;border:none;cursor:pointer;">
+              Anfrage senden
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   </section>
